@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Follow-Up Feature | SWAPP Church App</title>
+  <meta
+    name="description"
+    content="See how SWAPP Follow-Up keeps prospects organized, assigns visits, schedules appointments, captures history, and mobilizes ministry teams."
+  />
+  <link rel="canonical" href="https://swapp.church/features/follow-up/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    />
+  </noscript>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    .feature-hero {
+      padding: clamp(4rem, 6vw, 6.5rem) 0 clamp(3rem, 5vw, 5rem);
+    }
+
+    .feature-hero__inner {
+      display: grid;
+      gap: clamp(2.5rem, 5vw, 3.5rem);
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .feature-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .feature-hero__lead {
+      max-width: 48ch;
+      color: var(--color-neutral-600);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-brand-primary);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .feature-hero__media {
+      position: relative;
+      background: linear-gradient(140deg, rgba(15, 178, 122, 0.18), rgba(18, 216, 122, 0.1));
+      border-radius: var(--radius-lg);
+      padding: clamp(1.5rem, 3vw, 2.25rem);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .feature-hero__media img {
+      width: 100%;
+      height: auto;
+    }
+
+    .feature-section {
+      padding: clamp(4rem, 6vw, 5.5rem) 0;
+    }
+
+    .feature-section--alt {
+      background: var(--color-surface-alt);
+    }
+
+    .feature-section__grid {
+      display: grid;
+      gap: clamp(2.5rem, 4vw, 3rem);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      align-items: start;
+    }
+
+    .feature-section__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      margin-bottom: 1rem;
+    }
+
+    .feature-section__lead {
+      color: var(--color-neutral-600);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: baseline;
+    }
+
+    .feature-list li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-brand-primary);
+      margin-top: 0.4rem;
+    }
+
+    .feature-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-md);
+      padding: clamp(1.75rem, 3vw, 2.5rem);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .feature-card__title {
+      font-size: 1.4rem;
+      font-family: var(--font-display);
+      margin: 0;
+    }
+
+    .feature-card__text {
+      color: var(--color-neutral-600);
+      margin: 0;
+    }
+
+    .cta-band {
+      text-align: center;
+      padding: clamp(3.5rem, 5vw, 4.5rem) 0;
+      background: linear-gradient(150deg, rgba(15, 178, 122, 0.12), rgba(18, 216, 122, 0.22));
+    }
+
+    .cta-band__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.7rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta-band__text {
+      max-width: 60ch;
+      margin: 0 auto 2rem;
+      color: var(--color-neutral-600);
+      font-size: 1.05rem;
+    }
+
+    .cta-band__actions {
+      display: grid;
+      gap: 1rem;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html#home">
+        <img src="../assets/images/swapp-logo.svg" alt="SWAPP Church App logo" width="48" height="48" />
+        <span>SWAPP Church App</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+      </button>
+      <nav class="site-nav" aria-label="Primary" data-nav>
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="../index.html#home">Home</a></li>
+          <li><a class="site-nav__link" href="../index.html#features">Features</a></li>
+          <li><a class="site-nav__link" href="../index.html#how-it-works">How It Works</a></li>
+          <li><a class="site-nav__link" href="../index.html#admin-dashboard">Admin</a></li>
+          <li><a class="site-nav__link" href="../index.html#blog">Blog</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a class="btn btn--primary" href="../church-app.html#start-trial">Get Started Free</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile" aria-hidden="true">
+    <ul class="mobile-nav__list">
+      <li><a class="mobile-nav__link" href="../index.html#home">Home</a></li>
+      <li><a class="mobile-nav__link" href="../index.html#features">Features</a></li>
+      <li><a class="mobile-nav__link" href="../index.html#how-it-works">How It Works</a></li>
+      <li><a class="mobile-nav__link" href="../index.html#admin-dashboard">Admin</a></li>
+      <li><a class="mobile-nav__link" href="../index.html#blog">Blog</a></li>
+    </ul>
+    <div class="mobile-nav__cta">
+      <a class="btn btn--primary" href="../church-app.html#start-trial">Get Started Free</a>
+    </div>
+  </nav>
+  <main id="main-content">
+    <section class="feature-hero">
+      <div class="container feature-hero__inner">
+        <div class="feature-hero__content">
+          <span class="feature-meta">Follow-Up • Care Teams</span>
+          <h1 class="feature-hero__title">Follow-Up keeps every guest cared for personally.</h1>
+          <p class="feature-hero__lead">
+            SWAPP Follow-Up centralizes prospects, assignments, and next steps so hospitality, care, and discipleship teams can move in unity.
+          </p>
+          <div class="stack-md">
+            <a class="btn btn--primary" href="../church-app.html#follow-up">Launch Follow-Up Workflows</a>
+            <p class="microcopy">Guided onboarding • Works on web, iOS, and Android</p>
+            <p class="text-muted">
+              Want coaching? Explore the <a href="../index.html#blog">Guest Follow-Up Blueprint</a> in our resource library.
+            </p>
+          </div>
+        </div>
+        <figure class="feature-hero__media" aria-hidden="true">
+          <img src="../assets/images/mockup-followup.svg" alt="Mockup of SWAPP follow-up assignments across devices" width="640" height="480" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature-section feature-section--alt" id="purpose">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Purpose-built for meaningful follow-up</h2>
+          <p class="feature-section__lead">
+            Every visitor, prayer request, and pastoral care moment deserves a response. SWAPP gives teams one shared playbook so no name slips through the cracks.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">A single home for every prospect</h3>
+          <p class="feature-card__text">
+            Capture new families from connect cards, import guest lists from events, and keep profiles synced with your church management system in real time.
+          </p>
+          <p class="feature-card__text">
+            Leaders see the same context, notes, and timelines whether they are on desktop during staff meeting or mobile during visits.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section" id="benefits">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Benefits for every ministry lane</h2>
+          <p class="feature-section__lead">
+            Hospitality, care, discipleship, and outreach teams rally around the same dashboards, automations, and stories.
+          </p>
+          <ul class="feature-list">
+            <li>Surface daily priorities with color-coded queues for guests, donors, and families needing visits.</li>
+            <li>Trigger nurture emails, SMS reminders, and pastoral alerts as outcomes are logged.</li>
+            <li>Give campus pastors visibility into real-time milestones like salvations, baptisms, and membership steps.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Resources to build momentum</h3>
+          <p class="feature-card__text">
+            Download the <a href="../church-app.html#follow-up">Follow-Up Team Launch Kit</a> or join a live workshop from the Buildingit LLC coaching crew.
+          </p>
+          <p class="feature-card__text">
+            Share best practices with peers using the SWAPP community portal and replicate campaigns in a few clicks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section feature-section--alt" id="capabilities">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Key capabilities</h2>
+          <p class="feature-section__lead">
+            Equip follow-up directors with flexible tools that move with teams from first-time guest to long-term member.
+          </p>
+          <ul class="feature-list">
+            <li>Add prospects from connect cards, imports, or QR codes in seconds.</li>
+            <li>Assign visits with smart routing and track who is responsible at every stage.</li>
+            <li>Book appointments that sync to calendars and notify leaders automatically.</li>
+            <li>Share assignments with volunteers through the app, SMS, or printable sheets.</li>
+            <li>Capture visit history and notes that roll into ministry reports instantly.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Assignments on every device</h3>
+          <p class="feature-card__text">
+            Mobile cards show visit details, directions, and talking points while desktop dashboards surface workloads and overdue tasks.
+          </p>
+          <p class="feature-card__text">
+            Supervisors drag and drop assignments, create templates for recurring rhythms, and measure outcomes with built-in analytics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section" id="ministry-impact">
+      <div class="container feature-section__grid">
+        <div class="feature-card">
+          <h3 class="feature-card__title">Ministry impact stories</h3>
+          <p class="feature-card__text">
+            Churches partnering with Buildingit LLC report 42% faster first-time guest callbacks after launching SWAPP Follow-Up queues.
+          </p>
+          <p class="feature-card__text">
+            When visit notes sync instantly with the prayer wall and small group leaders, spiritual care accelerates across every ministry.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Narratives you can share</h3>
+          <p class="feature-card__text">
+            Teams capture testimonies, next steps, and answered prayers then share them in staff meetings and board updates with a single export.
+          </p>
+          <p class="feature-card__text">
+            The story of each household is preserved with timelines, attachments, and follow-up outcomes so future leaders continue ministry with confidence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2 class="cta-band__title">Invite Your Follow-Up Team.</h2>
+        <p class="cta-band__text">
+          Send assignments to every volunteer in minutes, monitor progress on any device, and celebrate the ministry impact that comes from consistent care.
+        </p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary" href="../church-app.html#start-trial">Invite Your Team Now</a>
+          <a class="btn btn--ghost" href="mailto:hello@swapp.church?subject=Follow-Up%20Demo">Talk with a Follow-Up Strategist</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
