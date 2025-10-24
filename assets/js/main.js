@@ -12,19 +12,30 @@ ready(() => {
   const body = document.body;
 
   if (navToggle && mobileNav) {
-    const toggleMobileNav = () => {
-      const isOpen = mobileNav.classList.toggle("is-open");
+    const setMobileNavState = (isOpen) => {
+      mobileNav.classList.toggle("is-open", isOpen);
       navToggle.setAttribute("aria-expanded", String(isOpen));
+      mobileNav.setAttribute("aria-hidden", String(!isOpen));
       body.classList.toggle("has-open-nav", isOpen);
     };
 
-    navToggle.addEventListener("click", toggleMobileNav);
+    setMobileNavState(false);
+
+    navToggle.addEventListener("click", () => {
+      const willOpen = navToggle.getAttribute("aria-expanded") !== "true";
+      setMobileNavState(willOpen);
+    });
 
     mobileNav.addEventListener("click", (event) => {
       if (event.target.matches("a")) {
-        mobileNav.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
-        body.classList.remove("has-open-nav");
+        setMobileNavState(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setMobileNavState(false);
+        navToggle.focus();
       }
     });
   }

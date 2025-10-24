@@ -1,0 +1,45 @@
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="outreach-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0FB27A" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0C152B" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="outreach-card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#E9F6F1" stop-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="32" fill="#0C152B"/>
+  <rect x="24" y="24" width="592" height="432" rx="28" fill="url(#outreach-card)"/>
+  <rect x="56" y="66" width="528" height="320" rx="24" fill="url(#outreach-bg)"/>
+  <g stroke="#2D7C65" stroke-width="1.5" opacity="0.65">
+    <path d="M96 146H544"/>
+    <path d="M96 206H544"/>
+    <path d="M96 266H544"/>
+    <path d="M96 326H544"/>
+    <path d="M156 106V386"/>
+    <path d="M216 106V386"/>
+    <path d="M276 106V386"/>
+    <path d="M336 106V386"/>
+    <path d="M396 106V386"/>
+    <path d="M456 106V386"/>
+  </g>
+  <g>
+    <path d="M196 206C196 188.327 210.327 174 228 174C245.673 174 260 188.327 260 206C260 228 228 270 228 270C228 270 196 228 196 206Z" fill="#0FB27A"/>
+    <circle cx="228" cy="206" r="16" fill="white"/>
+  </g>
+  <g opacity="0.9">
+    <path d="M412 246C412 228.327 426.327 214 444 214C461.673 214 476 228.327 476 246C476 268 444 310 444 310C444 310 412 268 412 246Z" fill="#12D87A"/>
+    <circle cx="444" cy="246" r="16" fill="#0C152B"/>
+  </g>
+  <g opacity="0.7">
+    <path d="M304 266C304 248.327 318.327 234 336 234C353.673 234 368 248.327 368 266C368 288 336 330 336 330C336 330 304 288 304 266Z" fill="#E8FFF6"/>
+    <circle cx="336" cy="266" r="14" fill="#0FB27A"/>
+  </g>
+  <rect x="56" y="406" width="136" height="32" rx="12" fill="#0FB27A" opacity="0.85"/>
+  <rect x="208" y="406" width="96" height="32" rx="12" fill="#12D87A" opacity="0.72"/>
+  <rect x="320" y="406" width="184" height="32" rx="12" fill="#0FB27A" opacity="0.45"/>
+  <rect x="520" y="406" width="64" height="32" rx="12" fill="#0FB27A" opacity="0.3"/>
+  <rect x="96" y="114" width="80" height="12" rx="6" fill="#0FB27A" opacity="0.6"/>
+  <rect x="186" y="114" width="120" height="12" rx="6" fill="white" opacity="0.65"/>
+</svg>

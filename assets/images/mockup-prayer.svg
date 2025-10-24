@@ -1,0 +1,17 @@
+<svg width="240" height="160" viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="prayer-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0FB27A" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#12D87A" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="160" rx="22" fill="#0C152B"/>
+  <rect x="12" y="16" width="216" height="128" rx="18" fill="#101F38"/>
+  <rect x="28" y="32" width="72" height="12" rx="6" fill="#2D3E5E"/>
+  <circle cx="52" cy="74" r="22" fill="url(#prayer-bg)"/>
+  <path d="M52 64C56.4183 64 60 67.5817 60 72V85H44V72C44 67.5817 47.5817 64 52 64Z" fill="#F9FEFD"/>
+  <path d="M44 84H60L56 95H48L44 84Z" fill="#D7FFF1"/>
+  <rect x="92" y="60" width="112" height="12" rx="6" fill="#22324F"/>
+  <rect x="92" y="80" width="136" height="10" rx="5" fill="#192947"/>
+  <rect x="28" y="112" width="180" height="12" rx="6" fill="#22324F"/>
+</svg>

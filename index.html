@@ -93,238 +93,230 @@
       <nav class="site-nav" aria-label="Primary" data-nav>
         <ul class="site-nav__list">
           <li><a class="site-nav__link" href="#home" aria-current="page">Home</a></li>
-          <li><a class="site-nav__link" href="#church-app">Church App</a></li>
-          <li class="nav__item--has-dropdown">
-            <button class="site-nav__link nav__dropdown-toggle" id="features-menu-button" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="features-menu" data-dropdown-toggle>
-              Features
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-                <path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-              </svg>
-            </button>
-            <div class="nav__dropdown" id="features-menu" role="menu" aria-labelledby="features-menu-button" data-dropdown>
-              <a class="site-nav__link" href="#engagement" role="menuitem">Member Engagement</a>
-              <a class="site-nav__link" href="#giving" role="menuitem">Giving &amp; Generosity</a>
-              <a class="site-nav__link" href="#insights" role="menuitem">Insights &amp; Automation</a>
-            </div>
-          </li>
-          <li><a class="site-nav__link" href="#pricing">Pricing</a></li>
+          <li><a class="site-nav__link" href="#features">Features</a></li>
+          <li><a class="site-nav__link" href="#how-it-works">How It Works</a></li>
+          <li><a class="site-nav__link" href="#admin-dashboard">Admin</a></li>
           <li><a class="site-nav__link" href="#blog">Blog</a></li>
-          <li><a class="site-nav__link" href="#faq">FAQ</a></li>
-          <li><a class="site-nav__link" href="#sign-in">Sign In</a></li>
         </ul>
         <div class="site-nav__cta">
-          <a class="btn btn--primary" href="#register">Register Your Church</a>
+          <a class="btn btn--primary" href="#start-trial">Start Free Trial</a>
         </div>
       </nav>
     </div>
   </header>
-  <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile">
+  <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile" aria-hidden="true">
     <ul class="mobile-nav__list">
       <li><a class="mobile-nav__link" href="#home">Home</a></li>
-      <li><a class="mobile-nav__link" href="#church-app">Church App</a></li>
-      <li><a class="mobile-nav__link" href="#engagement">Features: Engagement</a></li>
-      <li><a class="mobile-nav__link" href="#giving">Features: Giving</a></li>
-      <li><a class="mobile-nav__link" href="#insights">Features: Insights</a></li>
-      <li><a class="mobile-nav__link" href="#pricing">Pricing</a></li>
+      <li><a class="mobile-nav__link" href="#features">Features</a></li>
+      <li><a class="mobile-nav__link" href="#how-it-works">How It Works</a></li>
+      <li><a class="mobile-nav__link" href="#admin-dashboard">Admin</a></li>
       <li><a class="mobile-nav__link" href="#blog">Blog</a></li>
-      <li><a class="mobile-nav__link" href="#faq">FAQ</a></li>
-      <li><a class="mobile-nav__link" href="#sign-in">Sign In</a></li>
     </ul>
     <div class="mobile-nav__cta">
-      <a class="btn btn--primary" href="#register">Register Your Church</a>
+      <a class="btn btn--primary" href="#start-trial">Start Free Trial</a>
     </div>
   </nav>
-  <main id="main-content">
+    <main id="main-content">
     <section class="section hero" id="home">
       <div class="container grid grid--2">
         <div class="hero__content reveal">
-          <span class="badge">Buildingit LLC • Digital Ministry Platform</span>
-          <h1 class="hero__title">Nurture every member with the SWAPP Church App.</h1>
-          <p class="hero__text">Launch a branded experience across iOS, Android, and the web with giving, messaging, discipleship, and real-time insights in a single platform made for thriving churches.</p>
+          <span class="badge">Buildingit LLC • Practical ministry tech</span>
+          <h1 class="hero__title">Lead every ministry moment with confidence.</h1>
+          <p class="hero__text">SWAPP unifies outreach maps, volunteer follow-up, giving, and discipleship into one church app so your team never misses a next step.</p>
           <div class="stack-md">
-            <div class="store-badges">
-              <a href="https://apps.apple.com/" aria-label="Download on the App Store">
-                <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" width="180" height="60" loading="lazy" />
-              </a>
-              <a href="https://play.google.com/store" aria-label="Get it on Google Play">
-                <img src="assets/images/google-play-badge.svg" alt="Get it on Google Play" width="180" height="60" loading="lazy" />
-              </a>
-            </div>
-            <ul class="feature-list">
-              <li>Instant content publishing across all devices</li>
-              <li>Deep member analytics and automated follow-up flows</li>
-              <li>Secure in-app and web giving with QuickPay</li>
-            </ul>
             <div class="stack-md">
-              <a class="btn btn--primary" href="#register">Register Your Church</a>
-              <a class="btn btn--ghost" href="#church-app">Explore the platform</a>
+              <a class="btn btn--primary" href="#start-trial">Start Free Trial</a>
+              <a class="btn btn--ghost" href="#features">See Features</a>
             </div>
+            <p class="microcopy">Launch support included. Cancel anytime.</p>
           </div>
-        </div>
-        <div class="hero__media reveal" aria-hidden="true">
-          <div class="hero__card">
-            <img src="assets/images/hero-dashboard.svg" alt="SWAPP app dashboard preview" width="640" height="480" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="church-app">
-      <div class="container stack-lg">
-        <div class="text-center">
-          <h2 class="section__title">One platform, every touchpoint covered</h2>
-          <p class="section__lead">From first-time guest follow-up to weekly discipleship, SWAPP unifies your digital ministry strategy with mobile-first experiences and automation.</p>
-        </div>
-        <div class="grid grid--3">
-          <article class="card card--icon reveal" id="engagement">
-            <img src="assets/images/icon-instagram.svg" alt="Engagement icon" width="48" height="48" loading="lazy" />
-            <h3>Member Engagement</h3>
-            <p>Segment your congregation, schedule messages, and trigger personalized nurture plans automatically.</p>
-          </article>
-          <article class="card card--icon reveal" id="giving">
-            <img src="assets/images/icon-facebook.svg" alt="Generosity icon" width="48" height="48" loading="lazy" />
-            <h3>Giving &amp; Generosity</h3>
-            <p>Offer contactless giving, recurring pledges, and transparent reporting that inspires generosity.</p>
-          </article>
-          <article class="card card--icon reveal" id="insights">
-            <img src="assets/images/icon-x.svg" alt="Insights icon" width="48" height="48" loading="lazy" />
-            <h3>Insights &amp; Automation</h3>
-            <p>Track attendance, view engagement funnels, and automate next steps using ministry-centric data models.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt" id="features">
-      <div class="container grid grid--2">
-        <div class="reveal">
-          <h2 class="section__title">Built for hybrid ministry</h2>
-          <p class="section__lead">Deliver immersive live streams, on-demand archives, and AI-assisted workflows that equip your staff to pastor at scale.</p>
           <ul class="feature-list">
-            <li>Drag-and-drop layout builder with branded themes</li>
-            <li>Push notifications, SMS, and email sequenced together</li>
-            <li>Volunteer onboarding, scheduling, and reminders</li>
+            <li>Branded mobile app and web portal managed from one dashboard.</li>
+            <li>Automation that serves pastors, care teams, and ministry leads.</li>
+            <li>Secure giving with instant reconciliation and donor follow-up.</li>
           </ul>
         </div>
-        <div class="testimonial reveal">
-          <p class="testimonial__quote">“SWAPP helped us disciple our digital congregation and grow giving by 37% in a single quarter.”</p>
-          <div>
-            <strong>Pastor Jordan Ellis</strong>
-            <p class="text-muted">Illuminate Church, Austin TX</p>
-          </div>
+        <div class="hero__media reveal" aria-hidden="true">
+          <figure class="hero__card">
+            <img src="assets/images/mockup-outreach.svg" alt="SWAPP outreach map mockup showing visitor pins and follow-up tasks" width="640" height="480" loading="lazy" />
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section" id="pricing">
+    <section class="section section--alt social-proof" id="download">
+      <div class="container social-proof__inner">
+        <div class="stack-md">
+          <p class="badge">Trusted by multi-site ministries and church plants</p>
+          <p class="section__lead">4.9 ★ average rating across 480+ ministry leaders using SWAPP every week.</p>
+        </div>
+        <div class="store-badges">
+          <a href="https://apps.apple.com/" aria-label="Download on the App Store">
+            <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" width="180" height="60" loading="lazy" />
+          </a>
+          <a href="https://play.google.com/store" aria-label="Get it on Google Play">
+            <img src="assets/images/google-play-badge.svg" alt="Get it on Google Play" width="180" height="60" loading="lazy" />
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <p class="social-proof__caption">Built by Buildingit LLC. Explore <a href="/features/outreach.html">outreach tools</a>, <a href="/features/giving.html">giving workflows</a>, and visit our <a href="/blog/">blog</a> for more ministry ideas.</p>
+      </div>
+    </section>
+
+    <section class="section" id="features">
       <div class="container stack-lg">
         <div class="text-center">
-          <h2 class="section__title">Simple pricing that scales with your church</h2>
-          <p class="section__lead">Choose a launch plan that matches your ministry’s momentum. Every package includes unlimited members, secure hosting, and live support.</p>
+          <h2 class="section__title">Six pillars to strengthen every ministry lane</h2>
+          <p class="section__lead">Each feature pillar includes ministry-ready templates so your team can focus on people instead of platforms.</p>
         </div>
-        <div class="pricing">
-          <article class="pricing-card reveal">
-            <div>
-              <h3>Starter</h3>
-              <p class="text-muted">Ideal for new church plants and ministries launching digital discipleship.</p>
-            </div>
-            <div class="pricing-card__price">$99<span class="text-muted">/mo</span></div>
+        <div class="grid grid--3 feature-grid">
+          <article class="card reveal">
+            <h3>Outreach &amp; Guest Care</h3>
             <ul class="feature-list">
-              <li>Custom branded iOS &amp; Android app</li>
-              <li>Core giving + message automation</li>
-              <li>Two admin seats included</li>
+              <li>Plot new guests on interactive maps.</li>
+              <li>Assign ride-along visits or coffee meetups.</li>
+              <li>Automate welcome journeys with texts and emails.</li>
             </ul>
-            <a class="btn btn--ghost" href="#register">Start with Starter</a>
+            <a class="btn btn--ghost" href="/features/outreach.html">See Features</a>
           </article>
-          <article class="pricing-card pricing-card--featured reveal">
-            <div>
-              <h3>Growth</h3>
-              <p class="text-muted">For growing churches focused on hybrid experiences and data-driven ministry.</p>
-            </div>
-            <div class="pricing-card__price">$199<span class="text-muted">/mo</span></div>
+          <article class="card reveal">
+            <h3>Follow-up Automation</h3>
             <ul class="feature-list">
-              <li>Advanced analytics dashboards</li>
-              <li>Unlimited automation journeys</li>
-              <li>Dedicated success strategist</li>
+              <li>Queue pastoral tasks with due dates.</li>
+              <li>Trigger reminders when steps stall.</li>
+              <li>Track decisions and baptisms with notes.</li>
             </ul>
-            <a class="btn btn--primary" href="#register">Most Popular</a>
+            <a class="btn btn--ghost" href="/features/follow-up.html">See Features</a>
           </article>
-          <article class="pricing-card reveal">
-            <div>
-              <h3>Impact</h3>
-              <p class="text-muted">Enterprise-grade infrastructure for multi-site churches and denominations.</p>
-            </div>
-            <div class="pricing-card__price">Let’s Talk</div>
+          <article class="card reveal">
+            <h3>Prayer &amp; Care Feed</h3>
             <ul class="feature-list">
-              <li>API and data warehouse integrations</li>
-              <li>Dedicated onboarding concierge</li>
-              <li>Priority SLA &amp; compliance reviews</li>
+              <li>Gather prayer needs directly from the app.</li>
+              <li>Alert ministry teams for real-time responses.</li>
+              <li>Celebrate answered prayers with push updates.</li>
             </ul>
-            <a class="btn btn--ghost" href="#register">Schedule a consultation</a>
+            <a class="btn btn--ghost" href="/features/prayer.html">See Features</a>
           </article>
+          <article class="card reveal">
+            <h3>Events &amp; Groups</h3>
+            <ul class="feature-list">
+              <li>Publish gatherings with RSVP and volunteer slots.</li>
+              <li>Sync schedules to calendars automatically.</li>
+              <li>Send targeted reminders by campus or ministry.</li>
+            </ul>
+            <a class="btn btn--ghost" href="/features/events.html">See Features</a>
+          </article>
+          <article class="card reveal">
+            <h3>Generosity Suite</h3>
+            <ul class="feature-list">
+              <li>Enable recurring, pledge, and campaign giving.</li>
+              <li>Surface impact stories alongside every gift.</li>
+              <li>Deliver statements and thank-you notes instantly.</li>
+            </ul>
+            <a class="btn btn--ghost" href="/features/giving.html">See Features</a>
+          </article>
+          <article class="card reveal">
+            <h3>Insights &amp; Reporting</h3>
+            <ul class="feature-list">
+              <li>Spot trends with ministry health dashboards.</li>
+              <li>Export actionable lists for leaders each week.</li>
+              <li>Measure engagement across campuses and online.</li>
+            </ul>
+            <a class="btn btn--ghost" href="/features/insights.html">See Features</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="how-it-works">
+      <div class="container stack-lg">
+        <div class="text-center">
+          <h2 class="section__title">How it works in three simple steps</h2>
+          <p class="section__lead">From kickoff call to full adoption, we walk with your team so ministry keeps moving.</p>
+        </div>
+        <div class="grid grid--3 steps">
+          <article class="card reveal">
+            <span class="badge">Step 1</span>
+            <h3>Plan your launch</h3>
+            <p>Meet with a Buildingit coach to import people lists, set goals, and choose launch templates.</p>
+          </article>
+          <article class="card reveal">
+            <span class="badge">Step 2</span>
+            <h3>Engage your church</h3>
+            <p>Publish your branded app, invite leaders, and roll out guided pathways for guests, members, and givers.</p>
+          </article>
+          <article class="card reveal">
+            <span class="badge">Step 3</span>
+            <h3>Measure and multiply</h3>
+            <p>Review dashboards weekly, celebrate stories, and adjust automations so discipleship keeps scaling.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="admin-dashboard">
+      <div class="container grid grid--2">
+        <div class="stack-lg reveal">
+          <h2 class="section__title">Admin dashboard built for ministry teams</h2>
+          <p class="section__lead">Prioritize pastoral care, giving health, and event momentum from one clear command center.</p>
+          <ul class="feature-list">
+            <li>Color-coded follow-up queues keep pastors and care volunteers on track.</li>
+            <li>Prayer feed approvals and testimonies surface for weekend services.</li>
+            <li>Real-time giving goals pair with campaign updates to inspire generosity.</li>
+          </ul>
+          <div class="stack-md">
+            <a class="btn btn--primary" href="#start-trial">Start Free Trial</a>
+            <a class="btn btn--ghost" href="/features/admin-dashboard.html">See Features</a>
+          </div>
+        </div>
+        <div class="admin-media reveal" aria-hidden="true">
+          <img src="assets/images/mockup-followup.svg" alt="SWAPP admin dashboard showing follow-up flows" width="520" height="360" loading="lazy" />
+          <div class="admin-media__stack">
+            <img src="assets/images/mockup-prayer.svg" alt="SWAPP prayer feed mockup" width="240" height="160" loading="lazy" />
+            <img src="assets/images/mockup-events.svg" alt="SWAPP events hub mockup" width="240" height="160" loading="lazy" />
+            <img src="assets/images/mockup-giving.svg" alt="SWAPP generosity dashboard mockup" width="240" height="160" loading="lazy" />
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section section--alt" id="blog">
-      <div class="container grid grid--3">
-        <article class="card reveal">
-          <h3>Designing meaningful digital discipleship paths</h3>
-          <p class="text-muted">Discover how SWAPP churches craft intentional digital discipleship flows with actionable milestones.</p>
-          <a class="btn btn--ghost" href="https://swapp.church/blog" target="_blank" rel="noopener">Read the story</a>
-        </article>
-        <article class="card reveal">
-          <h3>How hybrid churches elevate generosity</h3>
-          <p class="text-muted">See giving strategies that blend online and in-person generosity moments using SWAPP.</p>
-          <a class="btn btn--ghost" href="https://swapp.church/blog" target="_blank" rel="noopener">Explore insights</a>
-        </article>
-        <article class="card reveal">
-          <h3>Playbook: Launch your church app in 30 days</h3>
-          <p class="text-muted">A step-by-step plan with templates, staff training, and marketing assets for a high-impact launch.</p>
-          <a class="btn btn--ghost" href="https://swapp.church/blog" target="_blank" rel="noopener">Download playbook</a>
-        </article>
+      <div class="container stack-lg">
+        <div class="text-center">
+          <h2 class="section__title">Fresh ideas from ministry practitioners</h2>
+          <p class="section__lead">Learn how churches are using SWAPP to disciple, care, and grow generosity in their communities.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <h3>Guest follow-up that lasts beyond Sunday</h3>
+            <p class="text-muted">See the outreach map playbook that keeps small groups connected with first-time guests.</p>
+            <a class="btn btn--ghost" href="/blog/outreach-map-playbook/">Read on the blog</a>
+          </article>
+          <article class="card reveal">
+            <h3>Practical rhythms for leading a prayer team</h3>
+            <p class="text-muted">Download the prayer feed cadence pastors use to respond quickly and share testimonies.</p>
+            <a class="btn btn--ghost" href="/blog/prayer-team-rhythms/">Read on the blog</a>
+          </article>
+          <article class="card reveal">
+            <h3>Designing a generosity moment every week</h3>
+            <p class="text-muted">Learn how SWAPP analytics help pastors celebrate giving impact with clarity.</p>
+            <a class="btn btn--ghost" href="/blog/generosity-moment-design/">Read on the blog</a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="faq">
+    <section class="section cta-band" id="start-trial">
       <div class="container grid grid--2">
-        <div class="stack-md reveal">
-          <h2 class="section__title">Frequently asked questions</h2>
-          <p class="section__lead">Have more questions? Reach out through the form below and our team will respond within one business day.</p>
-          <div class="faq">
-            <div class="faq__item">
-              <h3>How fast can we launch?</h3>
-              <p class="text-muted">Most churches launch in 3-4 weeks with our dedicated onboarding team handling app store approvals.</p>
-            </div>
-            <div class="faq__item">
-              <h3>Do we need developers?</h3>
-              <p class="text-muted">No coding required. Your team manages everything inside the intuitive SWAPP dashboard.</p>
-            </div>
-            <div class="faq__item">
-              <h3>What support is included?</h3>
-              <p class="text-muted">All plans include unlimited chat, quarterly strategy sessions, and Sunday morning emergency support.</p>
-            </div>
-          </div>
+        <div class="stack-md">
+          <h2 class="section__title">Ready to start your free trial?</h2>
+          <p class="section__lead">Schedule a 30-minute walkthrough and receive a launch checklist tailored to your ministry calendar.</p>
         </div>
-        <aside class="cta-banner reveal" id="register">
-          <h3>Ready to register your church?</h3>
-          <p>Book a guided walkthrough and receive a custom rollout plan tailored to your congregation.</p>
-          <a class="btn btn--primary" href="mailto:hello@swapp.church">Schedule a call</a>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section section--alt" id="sign-in">
-      <div class="container grid grid--2">
-        <div class="stack-md reveal">
-          <h2 class="section__title">Admin Sign In</h2>
-          <p class="section__lead">Access your SWAPP admin dashboard to manage content, automate discipleship flows, and monitor engagement in real time.</p>
-          <a class="btn btn--primary" href="https://dashboard.swapp.church" target="_blank" rel="noopener">Go to Dashboard</a>
-        </div>
-        <div class="stack-md reveal">
-          <h3>Need credentials?</h3>
-          <p class="text-muted">Request new user access from your Buildingit LLC success strategist or contact our support team for immediate assistance.</p>
-          <a class="btn btn--ghost" href="mailto:support@swapp.church">Contact support</a>
+        <div class="stack-md">
+          <a class="btn btn--primary" href="mailto:hello@swapp.church?subject=Start%20Free%20Trial">Start Free Trial</a>
+          <a class="btn btn--ghost" href="#features">See Features</a>
+          <p class="microcopy">Built by Buildingit LLC — ministry-first support from day one.</p>
         </div>
       </div>
     </section>
