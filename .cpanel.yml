@@ -1,7 +1,15 @@
 deployment:
   tasks:
-    # Set your deployment path
-    - export DEPLOYPATH=/home1/spreaeb3/public_html/swapp-temp/
+    # 1. Set deployment path to your live temp site
+    - export DEPLOYPATH=/home1/spreaeb3/public_html/website_e4b58e6f/
 
-    # Sync all files, including dotfiles like .htaccess
-    - /bin/rsync -av --delete --include=".*" ./ $DEPLOYPATH
+    # 2. Sync all files from repo to live folder, including hidden files like .htaccess
+    #    The --delete flag removes old files that no longer exist in the repo.
+    - /bin/rsync -av --delete --include=".*" --exclude=".git" ./ $DEPLOYPATH
+
+    # 3. Set correct file and folder permissions
+    - find $DEPLOYPATH -type d -exec chmod 755 {} \;
+    - find $DEPLOYPATH -type f -exec chmod 644 {} \;
+
+    # 4. Create or update a deployment log so you can verify successful deployment
+    - echo "Deployment completed successfully on $(date)" > $DEPLOYPATH/deploy-log.txt
