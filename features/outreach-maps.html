@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Outreach Maps Feature | SWAPP Church App</title>
+  <meta
+    name="description"
+    content="Discover how SWAPP Outreach Maps power digital territories, volunteer check-in/out, folders, progress tracking, and flexible map or list views for ministry teams."
+  />
+  <link rel="canonical" href="https://swapp.church/features/outreach-maps/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    />
+  </noscript>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    .feature-hero {
+      padding: clamp(4rem, 6vw, 6.5rem) 0 clamp(3rem, 5vw, 5rem);
+    }
+
+    .feature-hero__inner {
+      display: grid;
+      gap: clamp(2.5rem, 5vw, 3.5rem);
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .feature-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .feature-hero__lead {
+      max-width: 40ch;
+      color: var(--color-neutral-600);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-brand-primary);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .feature-hero__media {
+      position: relative;
+      background: linear-gradient(145deg, rgba(15, 178, 122, 0.18), rgba(18, 216, 122, 0.08));
+      border-radius: var(--radius-lg);
+      padding: clamp(1.5rem, 3vw, 2.25rem);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .feature-hero__media img {
+      width: 100%;
+      height: auto;
+    }
+
+    .feature-section {
+      padding: clamp(4rem, 6vw, 5.5rem) 0;
+    }
+
+    .feature-section--alt {
+      background: var(--color-surface-alt);
+    }
+
+    .feature-section__grid {
+      display: grid;
+      gap: clamp(2.5rem, 4vw, 3rem);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      align-items: start;
+    }
+
+    .feature-section__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      margin-bottom: 1rem;
+    }
+
+    .feature-section__lead {
+      color: var(--color-neutral-600);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: baseline;
+    }
+
+    .feature-list li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-brand-primary);
+      margin-top: 0.4rem;
+    }
+
+    .feature-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-md);
+      padding: clamp(1.75rem, 3vw, 2.5rem);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .feature-card__title {
+      font-size: 1.4rem;
+      font-family: var(--font-display);
+      margin: 0;
+    }
+
+    .feature-card__text {
+      color: var(--color-neutral-600);
+      margin: 0;
+    }
+
+    .cta-band {
+      text-align: center;
+      padding: clamp(3.5rem, 5vw, 4.5rem) 0;
+      background: linear-gradient(140deg, rgba(15, 178, 122, 0.12), rgba(18, 216, 122, 0.2));
+    }
+
+    .cta-band__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.7rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta-band__text {
+      max-width: 60ch;
+      margin: 0 auto 2rem;
+      color: var(--color-neutral-600);
+      font-size: 1.05rem;
+    }
+
+    .cta-band__actions {
+      display: grid;
+      gap: 1rem;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html#home">
+        <img src="../assets/images/swapp-logo.svg" alt="SWAPP Church App logo" width="48" height="48" />
+        <span>SWAPP Church App</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+      </button>
+      <nav class="site-nav" aria-label="Primary" data-nav>
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="../index.html#home">Home</a></li>
+          <li><a class="site-nav__link" href="../index.html#features">Features</a></li>
+          <li><a class="site-nav__link" href="../index.html#how-it-works">How It Works</a></li>
+          <li><a class="site-nav__link" href="../index.html#admin-dashboard">Admin</a></li>
+          <li><a class="site-nav__link" href="../index.html#blog">Blog</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a class="btn btn--primary" href="../church-app.html#start-trial">Get Started Free</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile" aria-hidden="true">
+    <ul class="mobile-nav__list">
+      <li><a class="mobile-nav__link" href="../index.html#home">Home</a></li>
+      <li><a class="mobile-nav__link" href="../index.html#features">Features</a></li>
+      <li><a class="mobile-nav__link" href="../index.html#how-it-works">How It Works</a></li>
+      <li><a class="mobile-nav__link" href="../index.html#admin-dashboard">Admin</a></li>
+      <li><a class="mobile-nav__link" href="../index.html#blog">Blog</a></li>
+    </ul>
+    <div class="mobile-nav__cta">
+      <a class="btn btn--primary" href="../church-app.html#start-trial">Get Started Free</a>
+    </div>
+  </nav>
+  <main id="main-content">
+    <section class="feature-hero">
+      <div class="container feature-hero__inner">
+        <div class="feature-hero__content">
+          <span class="feature-meta">Outreach • Mapping</span>
+          <h1 class="feature-hero__title">Outreach Maps organize every neighborhood touch.</h1>
+          <p class="feature-hero__lead">
+            Give outreach directors a live command center for digital territories, volunteer check-in/out, and progress tracking so every visit counts.
+          </p>
+          <div class="stack-md">
+            <a class="btn btn--primary" href="../church-app.html#start-trial">Set Up Your First Map</a>
+            <p class="microcopy">Guided launch included • Works with existing people records</p>
+            <p class="text-muted">
+              Want strategy tips? Read the <a href="../blog/outreach-mapping-playbook.html">Outreach Mapping Playbook</a> on our blog.
+            </p>
+          </div>
+        </div>
+        <figure class="feature-hero__media" aria-hidden="true">
+          <img src="../assets/images/mockup-outreach.svg" alt="Mockup of SWAPP outreach map with visit assignments" width="640" height="480" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature-section feature-section--alt" id="why-it-matters">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Why it matters</h2>
+          <p class="feature-section__lead">
+            Teams fueled by Buildingit LLC's outreach partners needed one shared space to plan, pray, and measure neighborhood ministry. Outreach Maps unite volunteers, pastors, and data so leaders see the gospel moving street by street.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Built with ministry impact in mind</h3>
+          <p class="feature-card__text">
+            From the Every Neighborhood Network to regional Serve Day coalitions, outreach organizations rely on consistent territory visibility. SWAPP keeps every leader aligned with folders for campuses, permissions for teams, and on-the-go updates.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section" id="capabilities">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Key capabilities</h2>
+          <p class="feature-section__lead">
+            Equip your compassion, evangelism, and follow-up teams with tools that work in the field and at the office.
+          </p>
+          <ul class="feature-list">
+            <li>Design digital territories with color-coded boundaries and filters by status or ministry lane.</li>
+            <li>Check volunteers in/out from any device and auto-log time served for reporting.</li>
+            <li>Group locations into folders for campuses, neighborhoods, and missional assignments.</li>
+            <li>Track progress with real-time visit outcomes, next steps, and goal dashboards.</li>
+            <li>Switch between map and list views to plan routes, print sheets, or power mobile checklists.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Made for leaders and volunteers</h3>
+          <p class="feature-card__text">
+            Volunteers can tap to check in, see assignments, and add notes while area leaders monitor which territories are covered and where support is needed. Admins manage permissions, folders, and templates once—every campus inherits the plan instantly.
+          </p>
+          <p class="feature-card__text">
+            Integrations with guest follow-up and prayer flows ensure every visit outcome launches the right care journey automatically.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section feature-section--alt" id="ministry-impact">
+      <div class="container feature-section__grid">
+        <div class="feature-card">
+          <h3 class="feature-card__title">Field-tested ministry impact</h3>
+          <p class="feature-card__text">
+            Partner churches serving with Compassion Coalition teams reported 37% faster follow-up because territory folders surfaced households still awaiting care. Outreach Maps kept door-to-door crews synced with central prayer rooms and benevolence teams.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Share updates from anywhere</h3>
+          <p class="feature-card__text">
+            Map pins update in real time, syncing testimonies, needs, and supply requests back to the same dashboard powering Buildingit LLC outreach operations.
+          </p>
+          <p class="feature-card__text">
+            Export snapshots or invite community partners with viewer links so the broader outreach organization can celebrate every story.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2 class="cta-band__title">Launch your outreach maps with a guided team.</h2>
+        <p class="cta-band__text">
+          Schedule a strategy call and our onboarding specialists will help you import addresses, build digital territories, and coach volunteers through their first check-in using SWAPP.
+        </p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary" href="../church-app.html#start-trial">Set Up Your First Map</a>
+          <a class="btn btn--ghost" href="mailto:hello@swapp.church?subject=Outreach%20Maps%20Demo">Talk with an Outreach Strategist</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
