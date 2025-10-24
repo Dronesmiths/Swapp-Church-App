@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prayer Feed Feature | SWAPP Church App</title>
+  <meta
+    name="description"
+    content="See how SWAPP Prayer Feeds unite church-wide and ministry teams with instant notifications, guided moderation, and pastoral insights that care for every need."
+  />
+  <link rel="canonical" href="https://swapp.church/features/prayer/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    />
+  </noscript>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    .feature-hero {
+      padding: clamp(4rem, 6vw, 6.5rem) 0 clamp(3rem, 5vw, 4.5rem);
+    }
+
+    .feature-hero__inner {
+      display: grid;
+      gap: clamp(2rem, 4vw, 3rem);
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .feature-hero__meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-brand-primary);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .feature-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      margin: 1rem 0;
+    }
+
+    .feature-hero__lead {
+      max-width: 42ch;
+      color: var(--color-neutral-600);
+      font-size: 1.1rem;
+      margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
+      background: var(--color-brand-primary);
+      color: var(--color-neutral-100);
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+      box-shadow: 0 15px 30px rgba(15, 178, 122, 0.25);
+    }
+
+    .cta-button:hover,
+    .cta-button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(15, 178, 122, 0.35);
+    }
+
+    .mobile-mockup {
+      position: relative;
+      margin: 0 auto;
+      max-width: 320px;
+      background: linear-gradient(140deg, rgba(12, 26, 64, 0.08), rgba(12, 26, 64, 0.18));
+      border-radius: 36px;
+      padding: 1.75rem 1.25rem 2.25rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .mobile-mockup__frame {
+      background: var(--color-neutral-100);
+      border-radius: 26px;
+      padding: 1.5rem 1.25rem;
+      display: grid;
+      gap: 1.1rem;
+    }
+
+    .mobile-mockup__header {
+      text-align: center;
+      font-weight: 600;
+      color: var(--color-neutral-700);
+    }
+
+    .prayer-card {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(12, 26, 64, 0.08);
+      padding: 0.85rem;
+      background: var(--color-neutral-50);
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .prayer-card__meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--color-neutral-500);
+    }
+
+    .prayer-card__title {
+      font-weight: 600;
+      color: var(--color-neutral-800);
+      font-size: 0.95rem;
+    }
+
+    .prayer-card__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--color-brand-primary);
+    }
+
+    .feature-section {
+      padding: clamp(4rem, 6vw, 5.5rem) 0;
+    }
+
+    .feature-section--alt {
+      background: var(--color-surface-alt);
+    }
+
+    .feature-section__grid {
+      display: grid;
+      gap: clamp(2.5rem, 4vw, 3.25rem);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      align-items: start;
+    }
+
+    .feature-section__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      margin-bottom: 1.2rem;
+    }
+
+    .feature-section__lead {
+      color: var(--color-neutral-600);
+      font-size: 1.05rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 1rem;
+      color: var(--color-neutral-600);
+    }
+
+    .feature-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: baseline;
+    }
+
+    .feature-list li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-brand-primary);
+      margin-top: 0.4rem;
+    }
+
+    .feature-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-md);
+      padding: clamp(1.75rem, 3vw, 2.5rem);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 1.15rem;
+    }
+
+    .feature-card__title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      margin: 0;
+    }
+
+    .feature-card__text {
+      color: var(--color-neutral-600);
+      margin: 0;
+    }
+
+    .cta-band {
+      padding: clamp(3.5rem, 5vw, 4.5rem) 0;
+      background: linear-gradient(140deg, rgba(15, 178, 122, 0.12), rgba(18, 216, 122, 0.2));
+      text-align: center;
+    }
+
+    .cta-band__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.7rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta-band__text {
+      color: var(--color-neutral-700);
+      max-width: 60ch;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="feature-hero">
+    <div class="container feature-hero__inner">
+      <div>
+        <div class="feature-hero__meta">Prayer Ministry</div>
+        <h1 class="feature-hero__title">Keep every request prayed for in real time</h1>
+        <p class="feature-hero__lead">
+          SWAPP Prayer Feeds knit together church-wide needs and specialized ministry channels so every request is seen,
+          prayed for, and shepherded with empathy. Volunteers, pastors, and members stay in sync with instant updates and
+          guided next steps.
+        </p>
+        <a class="cta-button" href="/demo">Start Your Prayer Feed</a>
+      </div>
+      <div class="mobile-mockup" aria-hidden="true">
+        <div class="mobile-mockup__frame">
+          <div class="mobile-mockup__header">SWAPP · Prayer Feed</div>
+          <article class="prayer-card">
+            <div class="prayer-card__meta">
+              <span>Church-wide</span>
+              <span>2m ago</span>
+            </div>
+            <div class="prayer-card__title">Pray for the Rivera family's housing search</div>
+            <p class="prayer-card__text">
+              Their lease ends in April—asking the Lord to open the right door and provide peace during the wait.
+            </p>
+            <div class="prayer-card__footer">
+              <span>18 praying</span>
+              <span>Mark as answered</span>
+            </div>
+          </article>
+          <article class="prayer-card">
+            <div class="prayer-card__meta">
+              <span>Student Ministry</span>
+              <span>5m ago</span>
+            </div>
+            <div class="prayer-card__title">Healing for Jordan after surgery</div>
+            <p class="prayer-card__text">
+              Updates from mom will post here—covering the recovery in prayer this week.
+            </p>
+            <div class="prayer-card__footer">
+              <span>12 praying</span>
+              <span>Send note</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="feature-section">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Church-wide &amp; ministry-specific feeds</h2>
+          <p class="feature-section__lead">
+            Build a central prayer home for your entire congregation while equipping individual ministries with their own
+            spaces to rally prayer teams.
+          </p>
+          <ul class="feature-list">
+            <li>Organize requests by campus, ministry, or language with clear visibility for the whole staff.</li>
+            <li>Allow members to subscribe to the feeds that matter most so they can respond quickly.</li>
+            <li>Surface answered prayers and celebrate testimonies in Sunday services or newsletters.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Context without complexity</h3>
+          <p class="feature-card__text">
+            Each request carries contact details, care status, and notes from your team so every follow-up feels personal.
+            Automatic reminders keep long-term needs in front of intercessors and pastors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section feature-section--alt">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Instant notifications that mobilize prayer</h2>
+          <p class="feature-section__lead">
+            Push notifications, SMS, and email alerts make sure urgent needs are covered within minutes. Teams can tailor
+            the cadence so members are informed without feeling overwhelmed.
+          </p>
+          <ul class="feature-list">
+            <li>Choose announcement templates for emergencies, praise reports, and weekly roundups.</li>
+            <li>Highlight action buttons so volunteers can call, visit, or deliver meals with one tap.</li>
+            <li>Track engagement to see how many members opened, prayed, or shared the request.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Care teams stay coordinated</h3>
+          <p class="feature-card__text">
+            Assign owners to each request and receive instant alerts when updates are posted. No more wondering if someone
+            followed up—activity logs show every prayer, comment, and check-in.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Admin moderation built for shepherds</h2>
+          <p class="feature-section__lead">
+            Protect sensitive details while keeping prayer easy to share. Moderators can review, anonymize, or route
+            requests to the right leaders before anything goes live.
+          </p>
+          <ul class="feature-list">
+            <li>Set visibility rules to ensure pastoral staff sees every confidential request first.</li>
+            <li>Empower trusted volunteers to approve posts while maintaining accountability.</li>
+            <li>Use smart filters to catch keywords that may need extra care or escalation.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Pastoral impact you can measure</h3>
+          <p class="feature-card__text">
+            Dashboards highlight households engaged in prayer, people still awaiting a response, and stories ready to
+            celebrate. Pastors gain a real-time view of spiritual needs so sermons, visits, and small group curricula can
+            respond with compassion.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cta-band">
+    <div class="container">
+      <h2 class="cta-band__title">Launch a prayer culture that never sleeps</h2>
+      <p class="cta-band__text">
+        Bring your congregation together with a dedicated prayer feed that honors privacy, multiplies intercession, and
+        keeps pastors close to every story.
+      </p>
+      <a class="cta-button" href="/demo">Start Your Prayer Feed</a>
+    </div>
+  </aside>
+</body>
+</html>
