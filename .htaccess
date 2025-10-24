@@ -1,0 +1,13 @@
+# Allow public access to files in this directory
+Options +Indexes
+DirectoryIndex index.html
+AllowOverride All
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+# Protect hidden files
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
