@@ -1,7 +1,7 @@
 deployment:
   tasks:
+    # Set your deployment path
     - export DEPLOYPATH=/home1/spreaeb3/public_html/swapp-temp/
-    - /bin/rsync -av --delete \
-        --exclude '.git*' \
-        --exclude '.cpanel.yml' \
-        ./ $DEPLOYPATH
+
+    # Sync all files, including dotfiles like .htaccess
+    - /bin/rsync -av --delete --include=".*" ./ $DEPLOYPATH
