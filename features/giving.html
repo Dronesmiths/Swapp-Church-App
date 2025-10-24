@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Giving Platform | SWAPP Church App</title>
+  <meta
+    name="description"
+    content="Centralize generosity with SWAPP digital giving. Launch unified donation links, track stewardship goals, and equip finance teams with actionable insights."
+  />
+  <link rel="canonical" href="https://swapp.church/features/giving/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    />
+  </noscript>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    .feature-hero {
+      padding: clamp(4rem, 6vw, 6.5rem) 0 clamp(3rem, 5vw, 4.5rem);
+    }
+
+    .feature-hero__inner {
+      display: grid;
+      gap: clamp(2rem, 4vw, 3rem);
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .feature-hero__meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-brand-primary);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .feature-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      margin: 1rem 0;
+    }
+
+    .feature-hero__lead {
+      max-width: 50ch;
+      color: var(--color-neutral-600);
+      font-size: 1.1rem;
+      margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
+      background: var(--color-brand-primary);
+      color: var(--color-neutral-100);
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+      box-shadow: 0 15px 30px rgba(12, 26, 64, 0.12);
+    }
+
+    .cta-button:hover,
+    .cta-button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(12, 26, 64, 0.2);
+    }
+
+    .feature-hero__image {
+      justify-self: center;
+      max-width: min(420px, 100%);
+    }
+
+    .feature-hero__image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 24px 48px rgba(12, 26, 64, 0.18));
+    }
+
+    .feature-section {
+      padding: clamp(3.5rem, 6vw, 5rem) 0;
+    }
+
+    .feature-section--alt {
+      background: linear-gradient(135deg, rgba(12, 26, 64, 0.04), rgba(12, 26, 64, 0.08));
+    }
+
+    .feature-section__grid {
+      display: grid;
+      gap: clamp(2rem, 4vw, 3rem);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: start;
+    }
+
+    .feature-section__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      margin-bottom: 1rem;
+    }
+
+    .feature-section__lead {
+      color: var(--color-neutral-600);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-list {
+      list-style: disc;
+      padding-left: 1.2rem;
+      color: var(--color-neutral-600);
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .feature-card {
+      padding: clamp(1.75rem, 4vw, 2.25rem);
+      border-radius: var(--radius-lg);
+      background: var(--color-neutral-100);
+      box-shadow: 0 12px 40px rgba(12, 26, 64, 0.08);
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .feature-card__meta {
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-brand-primary);
+    }
+
+    .feature-card__title {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      margin: 0;
+    }
+
+    .feature-card__text {
+      color: var(--color-neutral-600);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .video-section {
+      padding: clamp(3.5rem, 6vw, 5rem) 0;
+      background: radial-gradient(circle at top, rgba(12, 26, 64, 0.08), transparent 60%);
+    }
+
+    .video-card {
+      border-radius: var(--radius-lg);
+      background: var(--color-neutral-100);
+      padding: clamp(2rem, 4vw, 3rem);
+      display: grid;
+      gap: 1.5rem;
+      box-shadow: 0 16px 48px rgba(12, 26, 64, 0.12);
+    }
+
+    .video-card__media {
+      position: relative;
+      padding-top: 56.25%;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(12, 26, 64, 0.15);
+    }
+
+    .video-card__media iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-card__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .cta-band {
+      padding: clamp(3rem, 5vw, 4rem) 0;
+      text-align: center;
+      background: linear-gradient(135deg, var(--color-brand-primary), #0a1a3f);
+      color: var(--color-neutral-100);
+    }
+
+    .cta-band__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta-band__text {
+      max-width: 60ch;
+      margin: 0 auto 2rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="feature-hero">
+    <div class="container feature-hero__inner">
+      <div>
+        <span class="feature-hero__meta">Giving &amp; Stewardship</span>
+        <h1 class="feature-hero__title">Centralize digital generosity without losing the personal touch.</h1>
+        <p class="feature-hero__lead">
+          SWAPP unifies every giving flow—online, mobile, text, and in-person—so givers have a trusted home for generosity while
+          your finance and pastoral teams stay aligned on stewardship goals.
+        </p>
+        <div class="hero-actions">
+          <a class="cta-button" href="/church-app.html#start-trial">Enable Digital Giving</a>
+          <a class="btn btn--ghost" href="/features/index.html">Explore all features</a>
+        </div>
+      </div>
+      <figure class="feature-hero__image">
+        <img src="../assets/images/mockup-giving.svg" alt="SWAPP digital giving dashboard and donor mobile view" />
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section class="feature-section">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">One place to launch every giving link</h2>
+          <p class="feature-section__lead">
+            Build branded donation pages, campaign forms, and text keywords from the same console. Publish once and share
+            everywhere.
+          </p>
+          <ul class="feature-list">
+            <li>Centralize web, app, kiosk, and text-to-give links with unified branding.</li>
+            <li>Generate QR codes and short links for weekend services or print pieces.</li>
+            <li>Embed giving widgets on microsites while keeping transactions secure.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__meta">Centralized flows</span>
+          <h3 class="feature-card__title">Launch once, share everywhere</h3>
+          <p class="feature-card__text">
+            Administrators can create multi-campus funds, define defaults for fees and recurring gifts, and push updates in real
+            time so every channel stays in sync.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section feature-section--alt">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Stewardship support built in</h2>
+          <p class="feature-section__lead">
+            Equip pastors, finance teams, and generosity coaches with the insights they need to nurture discipleship in giving.
+          </p>
+          <ul class="feature-list">
+            <li>Real-time dashboards highlight first-time givers, lapsing donors, and pledge progress.</li>
+            <li>Automated thank-you workflows deliver timely, personal follow-up messages.</li>
+            <li>Role-based permissions let ministry leaders celebrate impact without exposing sensitive data.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__meta">Stewardship</span>
+          <h3 class="feature-card__title">Guide every generosity story</h3>
+          <p class="feature-card__text">
+            SWAPP surfaces care cues, recommended next steps, and templated conversations so shepherds can respond quickly and
+            cultivate lifelong generosity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Donor journeys that build trust</h2>
+          <p class="feature-section__lead">
+            Make giving effortless with secure payment options and clear communication every step of the way.
+          </p>
+          <ul class="feature-list">
+            <li>Offer ACH, Apple Pay, Google Pay, cards, and offline entry in one streamlined flow.</li>
+            <li>Let givers manage recurring schedules, pledges, and statements from the mobile app.</li>
+            <li>Send branded receipts instantly and roll up annual statements with one click.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__meta">Donor experience</span>
+          <h3 class="feature-card__title">Friction-free generosity</h3>
+          <p class="feature-card__text">
+            Built-in compliance and fraud monitoring keep transactions secure while transparent messaging reassures givers their
+            gifts are stewarded well.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section feature-section--alt">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Finance and reporting on autopilot</h2>
+          <p class="feature-section__lead">
+            Connect generosity data to the tools your finance team depends on without manual exports.
+          </p>
+          <ul class="feature-list">
+            <li>Sync deposits and batch reconciliation with your accounting platform.</li>
+            <li>Export donor statements, pledges, and campus performance in seconds.</li>
+            <li>Track campaign health and weekend trends with configurable dashboards.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__meta">Finance tools</span>
+          <h3 class="feature-card__title">Clarity for every ledger</h3>
+          <p class="feature-card__text">
+            Customizable reports and scheduled exports keep bookkeepers, elders, and auditors aligned while reducing double
+            entry and spreadsheet wrangling.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="container">
+        <div class="video-card">
+          <div>
+            <h2 class="feature-section__title">See the giving console in action</h2>
+            <p class="feature-section__lead">
+              Watch a quick walkthrough of the SWAPP generosity dashboard, then book a personalized tour with our team.
+            </p>
+          </div>
+          <div class="video-card__media">
+            <iframe
+              src="https://www.youtube.com/embed/M_J2ZFsJ7P8"
+              title="SWAPP Digital Giving Walkthrough"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-card__actions">
+            <a class="cta-button" href="/church-app.html#start-trial">Enable Digital Giving</a>
+            <a class="btn btn--ghost" href="/demo#giving">Watch the full demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cta-band">
+    <div class="container">
+      <h2 class="cta-band__title">Fuel ministry impact with unified giving</h2>
+      <p class="cta-band__text">
+        Move every donor into a trusted, centralized experience and empower leaders to steward resources with clarity.
+      </p>
+      <a class="cta-button" href="/church-app.html#start-trial">Enable Digital Giving</a>
+    </div>
+  </aside>
+</body>
+</html>
