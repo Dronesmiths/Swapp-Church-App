@@ -134,4 +134,22 @@ ready(() => {
       }
     });
   }
+
+  const loadMoreButton = document.querySelector("[data-load-more]");
+  const loadMoreTargets = document.querySelectorAll("[data-load-more-target]");
+
+  if (loadMoreButton && loadMoreTargets.length) {
+    loadMoreButton.addEventListener("click", () => {
+      loadMoreTargets.forEach((element) => {
+        element.classList.remove("is-hidden");
+        element.removeAttribute("data-load-more-target");
+      });
+
+      loadMoreButton.textContent = "All articles loaded";
+      loadMoreButton.setAttribute("disabled", "true");
+      loadMoreButton.classList.add("btn--disabled");
+    });
+  } else if (loadMoreButton) {
+    loadMoreButton.setAttribute("hidden", "true");
+  }
 });
