@@ -2,57 +2,186 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SWAPP Church App – Deployment Successful</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SWAPP – The All-in-One Church App</title>
+  <meta name="description" content="SWAPP is a complete church app for events, giving, outreach, and discipleship—all in one place." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SWAPP – The All-in-One Church App" />
+  <meta property="og:description" content="Simplify ministry management with SWAPP—events, giving, outreach, and more in one app." />
+  <meta property="og:image" content="https://swapp.church/wp-content/uploads/2025/06/Church-APP-Image-1.webp" />
+  <meta property="og:url" content="https://swapp.church/" />
+  <meta property="og:type" content="website" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #0fb27a, #1e3a8a);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.6rem;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      line-height: 1.6;
-    }
-    a {
-      background: white;
-      color: #0fb27a;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 24px;
-      display: inline-block;
-      transition: 0.3s;
-    }
-    a:hover {
-      background: #0fb27a;
-      color: white;
-    }
-    .logo {
-      width: 160px;
-      border-radius: 14px;
-      margin-bottom: 25px;
-      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Poppins',sans-serif;background:#fff;color:#111;line-height:1.6}
+    img{max-width:100%;height:auto;border-radius:12px}
+    section{padding:80px 20px}
+    h2{font-size:38px;font-weight:800;color:#16a34a;margin-bottom:20px;text-align:center}
+    p{color:#333;margin-bottom:20px}
+    a.btn{display:inline-block;padding:14px 32px;border-radius:6px;font-weight:700;text-decoration:none;transition:all .3s ease}
+    a.btn-primary{background:#16a34a;color:#fff}
+    a.btn-primary:hover{background:#15803d}
+    a.btn-outline{border:2px solid #16a34a;color:#16a34a}
+    a.btn-outline:hover{background:#16a34a;color:#fff}
+    /* Hero */
+    #hero{position:relative;height:85vh;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#fff;text-align:left;background:#000}
+    .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease}
+    .slide.active{opacity:1;z-index:1}
+    .slide::before{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,.15));z-index:1}
+    .slide-content{position:relative;z-index:2;max-width:650px;padding:40px}
+    .slide-content h4{font-size:18px;color:#22c55e;text-transform:uppercase;margin-bottom:8px}
+    .slide-content h1{font-size:46px;font-weight:900;margin-bottom:20px}
+    .slide-content p{font-size:18px;margin-bottom:25px}
+    .slider-controls{position:absolute;bottom:20px;right:20px;display:flex;gap:8px;z-index:3}
+    .dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.6);cursor:pointer}
+    .dot.active{background:#fff}
+    .arrow{background:rgba(0,0,0,.4);border:none;color:#fff;font-size:20px;padding:8px 12px;border-radius:6px;cursor:pointer}
+    .arrow:hover{background:rgba(0,0,0,.7)}
+    /* General grids */
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1200px;margin:auto}
+    @media(max-width:768px){
+      #hero{height:70vh;text-align:center}
+      .slide-content{padding:20px}
+      .slide-content h1{font-size:30px}
+      .slide-content p{font-size:15px}
+      .grid{grid-template-columns:1fr;text-align:center}
     }
   </style>
 </head>
+
 <body>
-  <img src="https://swapp.church/wp-content/uploads/2025/06/SWAPP-Logo-Neon-Green.webp" alt="SWAPP Church App Logo" class="logo" />
-  <h1>🚀 SWAPP Church App Deployment Successful</h1>
-  <p>Your GitHub repository is now connected to your cPanel site. Any future <strong>push to main</strong> will automatically deploy updates here.</p>
-  <a href="https://swapp.church" target="_blank">Visit SWAPP</a>
+
+  <!-- HERO SLIDER -->
+  <section id="hero">
+    <div class="slide active" style="background-image:url('https://swapp.church/wp-content/uploads/2025/06/Church-APP-Image-1.webp');">
+      <div class="slide-content">
+        <h4>What Is SWAPP?</h4>
+        <h1>A Complete Church App</h1>
+        <p>SWAPP is a mobile app for your whole ministry—giving, events, outreach, and discipleship all in one.</p>
+        <a href="https://theswapp.io/register?referral_code=zuPaoR" class="btn btn-primary">Get Started Free</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image:url('https://swapp.church/wp-content/uploads/2025/09/event.webp');">
+      <div class="slide-content">
+        <h4>Why Use SWAPP?</h4>
+        <h1>Keep Ministry Organized</h1>
+        <p>No more juggling ten tools. SWAPP keeps your church connected without the chaos.</p>
+        <a href="https://theswapp.io/register?referral_code=zuPaoR" class="btn btn-primary">Start Free</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image:url('https://swapp.church/wp-content/uploads/2025/09/Outreach.webp');">
+      <div class="slide-content">
+        <h4>How Do I Use It?</h4>
+        <h1>Simple Steps, Real Impact</h1>
+        <p>Download the app, invite your team, and start managing follow-ups, giving, and outreach in one place.</p>
+        <a href="https://theswapp.io/register?referral_code=zuPaoR" class="btn btn-primary">Try It Free</a>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="arrow" onclick="showSlide(current-1)">❮</button>
+      <div id="dots" style="display:flex;gap:6px;"></div>
+      <button class="arrow" onclick="showSlide(current+1)">❯</button>
+    </div>
+  </section>
+
+  <!-- NAVIGATION -->
+  <nav style="display:flex;justify-content:center;flex-wrap:wrap;gap:22px;padding:15px 20px;background:#0f172a;">
+    <a href="#events" style="color:#fff;text-decoration:none;font-weight:600;font-size:15px;text-transform:uppercase;">Events</a>
+    <a href="#prayer" style="color:#fff;text-decoration:none;font-weight:600;font-size:15px;text-transform:uppercase;">Prayer</a>
+    <a href="#follow" style="color:#fff;text-decoration:none;font-weight:600;font-size:15px;text-transform:uppercase;">Follow-Up</a>
+    <a href="#outreach" style="color:#fff;text-decoration:none;font-weight:600;font-size:15px;text-transform:uppercase;">Outreach</a>
+    <a href="#giving" style="color:#fff;text-decoration:none;font-weight:600;font-size:15px;text-transform:uppercase;">Giving</a>
+  </nav>
+
+  <!-- SAMPLE FEATURE SECTION -->
+  <section id="events" style="background:#f9fdfb;">
+    <div class="grid">
+      <div>
+        <h2>How to Do Events with SWAPP</h2>
+        <p>Plan, share, and check-in attendees all inside one app. No more spreadsheets or confusion.</p>
+        <ul style="list-style:none;text-align:left">
+          <li><strong>1.</strong> Create your event in a few taps.</li>
+          <li><strong>2.</strong> Invite and track RSVPs.</li>
+          <li><strong>3.</strong> Use built-in check-ins to manage attendance.</li>
+        </ul>
+      </div>
+      <div style="text-align:center">
+        <img loading="lazy" src="https://swapp.church/wp-content/uploads/2025/06/Church-APP-Events.webp" alt="SWAPP Church Events Feature" />
+      </div>
+    </div>
+  </section>
+
+  <section id="prayer">
+    <div class="grid">
+      <div style="text-align:center">
+        <img loading="lazy" src="https://swapp.church/wp-content/uploads/2025/06/Custom-Church-Prayer-APP-SWAPP.webp" alt="SWAPP Prayer Feature" />
+      </div>
+      <div>
+        <h2>Prayer Requests Made Simple</h2>
+        <p>Keep your church praying together with a live prayer wall that connects hearts in real time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="follow" style="background:#f9fdfb;">
+    <div class="grid">
+      <div>
+        <h2>Smarter Follow-Ups</h2>
+        <p>Never lose track of visitors again. Assign, track, and complete follow-ups easily.</p>
+      </div>
+      <div style="text-align:center">
+        <img loading="lazy" src="https://swapp.church/wp-content/uploads/2025/06/Prospecting-and-follow-up-Looping-video.webp" alt="SWAPP Follow-Up Tools" />
+      </div>
+    </div>
+  </section>
+
+  <section id="outreach">
+    <div class="grid">
+      <div style="text-align:center">
+        <img loading="lazy" src="https://swapp.church/wp-content/uploads/2025/06/Outreach-Maps-Video-Loop.webp" alt="SWAPP Outreach Feature" />
+      </div>
+      <div>
+        <h2>Outreach Made Simple</h2>
+        <p>Assign routes, track visits, and follow up with your community in real time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="giving" style="background:#f9fdfb;">
+    <div class="grid">
+      <div>
+        <h2>Simple & Secure Giving</h2>
+        <p>Encourage generosity with built-in giving that’s safe, fast, and transparent.</p>
+        <a href="https://theswapp.io/register?referral_code=zuPaoR" class="btn btn-primary">Start Free Trial</a>
+      </div>
+      <div style="text-align:center">
+        <img loading="lazy" src="https://swapp.church/wp-content/uploads/2025/06/Neon-Green-SWAPP-Church-Giving-A.webp" alt="SWAPP Giving Feature" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:#e6f7ff;text-align:center">
+    <h2 style="color:#1e3a8a">Ready to Transform Your Ministry?</h2>
+    <p style="max-width:700px;margin:0 auto 40px">SWAPP brings everything your church needs into one simple app—outreach, giving, events, and discipleship.</p>
+    <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap">
+      <a href="https://theswapp.io/register?referral_code=zuPaoR" class="btn btn-primary">Start Free Trial</a>
+      <a href="https://swapp.church/church-app/" class="btn btn-outline">Learn More</a>
+    </div>
+  </section>
+
+  <!-- JS Slider -->
+  <script>
+    const slides=document.querySelectorAll('.slide'),dotsC=document.getElementById('dots');let current=0;
+    slides.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i==0?' active':'');d.onclick=()=>showSlide(i);dotsC.appendChild(d)});
+    const dots=document.querySelectorAll('.dot');
+    function showSlide(n){slides[current].classList.remove('active');dots[current].classList.remove('active');current=(n+slides.length)%slides.length;slides[current].classList.add('active');dots[current].classList.add('active')}
+    setInterval(()=>showSlide(current+1),6000);
+  </script>
+
 </body>
 </html>
