@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SWAPP Features | Outreach, Giving, Prayer &amp; More</title>
+  <meta name="description" content="Explore every feature inside the SWAPP church platform including outreach maps, follow-up workflows, ministries, prayer, giving, events, and the admin dashboard." />
+  <link rel="canonical" href="https://swapp.church/features/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600;700&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600;700&amp;display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@500;600;700&amp;display=swap" />
+  </noscript>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    .feature-hero {
+      text-align: center;
+    }
+
+    .feature-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 4vw, 3.2rem);
+      margin-bottom: 1rem;
+    }
+
+    .feature-hero__lead {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--color-neutral-600);
+      font-size: 1.1rem;
+    }
+
+    .feature-nav {
+      margin-top: clamp(2rem, 4vw, 3rem);
+      border-radius: var(--radius-md);
+      background: rgba(12, 26, 64, 0.04);
+      overflow-x: auto;
+      padding: 0.6rem;
+      scrollbar-width: thin;
+    }
+
+    .feature-nav__list {
+      display: flex;
+      gap: 0.75rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: nowrap;
+    }
+
+    .feature-nav__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.1rem;
+      border-radius: 999px;
+      background: var(--color-neutral-100);
+      color: var(--color-brand-dark);
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background var(--transition-base), transform var(--transition-base);
+    }
+
+    .feature-nav__link:hover,
+    .feature-nav__link:focus-visible {
+      background: var(--color-brand-primary);
+      color: var(--color-neutral-100);
+      transform: translateY(-2px);
+    }
+
+    .feature-grid {
+      margin-top: clamp(3rem, 6vw, 4rem);
+    }
+
+    .feature-card {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .feature-card__meta {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+      font-weight: 600;
+      color: var(--color-brand-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.85rem;
+    }
+
+    .feature-card__title {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      margin: 0;
+    }
+
+    .feature-card__body {
+      color: var(--color-neutral-600);
+      font-size: 1rem;
+    }
+
+    .feature-card__link {
+      color: var(--color-brand-primary);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .feature-card__link svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .feature-details {
+      margin-top: clamp(3rem, 6vw, 4rem);
+      display: grid;
+      gap: clamp(2.5rem, 5vw, 3rem);
+    }
+
+    .feature-row {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 4vw, 3rem);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 1.75rem;
+    }
+
+    .feature-row__header {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .feature-row__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      margin: 0;
+    }
+
+    .feature-row__summary {
+      color: var(--color-neutral-600);
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .feature-row__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+      color: var(--color-neutral-600);
+    }
+
+    .feature-row__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .cta-band {
+      margin-top: clamp(4rem, 7vw, 5rem);
+      background: linear-gradient(135deg, rgba(15, 178, 122, 0.92), rgba(18, 216, 122, 0.92));
+      border-radius: var(--radius-lg);
+      padding: clamp(2.5rem, 5vw, 3.5rem);
+      color: var(--color-neutral-100);
+      text-align: center;
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .cta-band__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.5vw, 2.4rem);
+      margin: 0 0 1rem;
+    }
+
+    .cta-band__text {
+      margin: 0 0 1.75rem;
+      font-size: 1.05rem;
+    }
+
+    @media (min-width: 768px) {
+      .feature-row {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .feature-row__content {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .feature-row__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-nav {
+        padding-inline: 1rem;
+      }
+
+      .feature-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body id="features">
+  <a class="sr-only" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/">
+        <img src="../assets/images/swapp-logo.svg" alt="SWAPP Church App logo" width="48" height="48" />
+        <span>SWAPP Church App</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+      </button>
+      <nav class="site-nav" aria-label="Primary" data-nav>
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="/">Home</a></li>
+          <li><a class="site-nav__link" href="/features/" aria-current="page">Features</a></li>
+          <li><a class="site-nav__link" href="/church-app.html#how-it-works">How It Works</a></li>
+          <li><a class="site-nav__link" href="/church-app.html#admin-dashboard">Admin</a></li>
+          <li><a class="site-nav__link" href="/church-app.html#blog">Blog</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a class="btn btn--primary" href="/church-app.html#start-trial">Start Free Trial</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile" aria-hidden="true">
+    <ul class="mobile-nav__list">
+      <li><a class="mobile-nav__link" href="/">Home</a></li>
+      <li><a class="mobile-nav__link" href="/features/" aria-current="page">Features</a></li>
+      <li><a class="mobile-nav__link" href="/church-app.html#how-it-works">How It Works</a></li>
+      <li><a class="mobile-nav__link" href="/church-app.html#admin-dashboard">Admin</a></li>
+      <li><a class="mobile-nav__link" href="/church-app.html#blog">Blog</a></li>
+    </ul>
+    <div class="mobile-nav__cta">
+      <a class="btn btn--primary" href="/church-app.html#start-trial">Start Free Trial</a>
+    </div>
+  </nav>
+  <main id="main-content">
+    <section class="section feature-hero">
+      <div class="container stack-md">
+        <div class="stack-md">
+          <span class="badge">All-in-one digital ministry suite</span>
+          <h1 class="feature-hero__title">Every feature your team needs to shepherd well.</h1>
+          <p class="feature-hero__lead">SWAPP keeps outreach, pastoral care, groups, and generosity together in a single platform so your staff and volunteers can focus on people, not juggling apps.</p>
+        </div>
+        <nav class="feature-nav" aria-label="Feature quick links">
+          <ul class="feature-nav__list">
+            <li><a class="feature-nav__link" href="#outreach-maps">Outreach Maps</a></li>
+            <li><a class="feature-nav__link" href="#follow-up">Follow-Up</a></li>
+            <li><a class="feature-nav__link" href="#ministries-groups">Ministries &amp; Groups</a></li>
+            <li><a class="feature-nav__link" href="#prayer">Prayer</a></li>
+            <li><a class="feature-nav__link" href="#events">Events</a></li>
+            <li><a class="feature-nav__link" href="#giving">Giving</a></li>
+            <li><a class="feature-nav__link" href="#admin-dashboard">Admin Dashboard</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container feature-grid grid grid--2">
+        <article class="card feature-card" id="outreach-maps">
+          <div class="feature-card__meta">01 • Outreach</div>
+          <h2 class="feature-card__title">Outreach Maps</h2>
+          <p class="feature-card__body">See every visit, route, and follow-up opportunity in real time with map-driven outreach assignments that sync to mobile instantly.</p>
+          <a class="feature-card__link" href="/features/outreach.html">Explore Outreach Maps
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </article>
+        <article class="card feature-card" id="follow-up">
+          <div class="feature-card__meta">02 • Care</div>
+          <h2 class="feature-card__title">Follow-Up</h2>
+          <p class="feature-card__body">Automate assignments, reminders, and communication touchpoints so every guest and member gets a timely response from the right leader.</p>
+          <a class="feature-card__link" href="/features/follow-up.html">See Follow-Up Workflows
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </article>
+        <article class="card feature-card" id="ministries-groups">
+          <div class="feature-card__meta">03 • Discipleship</div>
+          <h2 class="feature-card__title">Ministries &amp; Groups</h2>
+          <p class="feature-card__body">Organize small groups, teams, and classes with rosters, messaging, and resources in one hub accessible across devices.</p>
+          <a class="feature-card__link" href="/features/ministries-and-groups.html">Manage Ministries
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </article>
+        <article class="card feature-card" id="prayer">
+          <div class="feature-card__meta">04 • Care</div>
+          <h2 class="feature-card__title">Prayer</h2>
+          <p class="feature-card__body">Capture requests in the app, route them to teams, and celebrate answered prayers with updates that notify members automatically.</p>
+          <a class="feature-card__link" href="/features/prayer.html">Learn About Prayer Tools
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </article>
+        <article class="card feature-card" id="events">
+          <div class="feature-card__meta">05 • Engagement</div>
+          <h2 class="feature-card__title">Events</h2>
+          <p class="feature-card__body">Publish registrations, volunteer roles, and reminders for services, conferences, and community outreach in minutes.</p>
+          <a class="feature-card__link" href="/features/events.html">Plan Events
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </article>
+        <article class="card feature-card" id="giving">
+          <div class="feature-card__meta">06 • Generosity</div>
+          <h2 class="feature-card__title">Giving</h2>
+          <p class="feature-card__body">Provide a fast, secure giving experience with instant receipts, recurring gifts, and reconciliation that feeds into your finance tools.</p>
+          <a class="feature-card__link" href="/features/giving.html">View Giving Features
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </article>
+        <article class="card feature-card" id="admin-dashboard">
+          <div class="feature-card__meta">07 • Insights</div>
+          <h2 class="feature-card__title">Admin Dashboard</h2>
+          <p class="feature-card__body">Monitor adoption, track follow-up, and configure every module from a central admin home that highlights what needs attention.</p>
+          <a class="feature-card__link" href="/features/admin-dashboard.html">Tour the Dashboard
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container feature-details">
+        <article class="feature-row" aria-labelledby="outreach-maps-detail">
+          <div class="feature-row__header">
+            <span class="badge">Outreach Maps</span>
+            <h2 class="feature-row__title" id="outreach-maps-detail">Send teams with confidence.</h2>
+            <p class="feature-row__summary">Assign drive routes, drop pins for high-priority visits, and watch real-time progress as teams update notes from the field.</p>
+          </div>
+          <div class="feature-row__content">
+            <ul class="feature-row__list">
+              <li>Dynamic map layers for guests, members, and prospects.</li>
+              <li>Smart routing with estimated drive times.</li>
+              <li>Offline mode for neighborhoods with limited service.</li>
+              <li>Geo-fenced check-ins for verifying completed visits.</li>
+            </ul>
+            <div class="feature-row__actions">
+              <a class="btn btn--primary" href="/features/outreach.html">Explore Outreach Maps</a>
+              <a class="btn btn--ghost" href="/church-app.html#start-trial">Schedule a demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-row" aria-labelledby="follow-up-detail">
+          <div class="feature-row__header">
+            <span class="badge">Follow-Up</span>
+            <h2 class="feature-row__title" id="follow-up-detail">Never miss a next step.</h2>
+            <p class="feature-row__summary">Trigger workflows from forms, events, or manual assignments and give leaders a focused queue of people to serve.</p>
+          </div>
+          <div class="feature-row__content">
+            <ul class="feature-row__list">
+              <li>Templates for first-time guests, salvations, and pastoral care.</li>
+              <li>Automated reminders via push, email, and SMS.</li>
+              <li>Escalation rules for overdue tasks.</li>
+              <li>Conversation history and notes in one place.</li>
+            </ul>
+            <div class="feature-row__actions">
+              <a class="btn btn--primary" href="/features/follow-up.html">See Follow-Up Workflows</a>
+              <a class="btn btn--ghost" href="/church-app.html#start-trial">Talk with our team</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-row" aria-labelledby="ministries-groups-detail">
+          <div class="feature-row__header">
+            <span class="badge">Ministries &amp; Groups</span>
+            <h2 class="feature-row__title" id="ministries-groups-detail">Unite discipleship pathways.</h2>
+            <p class="feature-row__summary">Resource ministry leaders with tools for scheduling, communicating, and measuring participation across every group.</p>
+          </div>
+          <div class="feature-row__content">
+            <ul class="feature-row__list">
+              <li>Group rosters synced to the mobile directory.</li>
+              <li>Messaging channels with push and email delivery.</li>
+              <li>Attendance tracking with quick check-in mode.</li>
+              <li>Content library for guides, videos, and devotionals.</li>
+            </ul>
+            <div class="feature-row__actions">
+              <a class="btn btn--primary" href="/features/ministries-and-groups.html">Manage Ministries</a>
+              <a class="btn btn--ghost" href="/church-app.html#start-trial">Request onboarding help</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-row" aria-labelledby="prayer-detail">
+          <div class="feature-row__header">
+            <span class="badge">Prayer</span>
+            <h2 class="feature-row__title" id="prayer-detail">Mobilize prayer in minutes.</h2>
+            <p class="feature-row__summary">Empower members to submit, share, and celebrate prayer needs while pastors coordinate care responses.</p>
+          </div>
+          <div class="feature-row__content">
+            <ul class="feature-row__list">
+              <li>Public, private, and team-based request channels.</li>
+              <li>Automated updates when prayers are answered.</li>
+              <li>Privacy controls for sensitive needs.</li>
+              <li>Printable intercession lists for gatherings.</li>
+            </ul>
+            <div class="feature-row__actions">
+              <a class="btn btn--primary" href="/features/prayer.html">Learn About Prayer Tools</a>
+              <a class="btn btn--ghost" href="/church-app.html#start-trial">Start a prayer pilot</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-row" aria-labelledby="events-detail">
+          <div class="feature-row__header">
+            <span class="badge">Events</span>
+            <h2 class="feature-row__title" id="events-detail">Fill every experience.</h2>
+            <p class="feature-row__summary">Create registrations, collect payments, and assign volunteers from the same dashboard powering your weekend services.</p>
+          </div>
+          <div class="feature-row__content">
+            <ul class="feature-row__list">
+              <li>Simple forms with custom questions and fees.</li>
+              <li>Volunteer scheduling and reminders.</li>
+              <li>Capacity limits with automated waitlists.</li>
+              <li>Check-in badges and QR codes on mobile.</li>
+            </ul>
+            <div class="feature-row__actions">
+              <a class="btn btn--primary" href="/features/events.html">Plan Events</a>
+              <a class="btn btn--ghost" href="/church-app.html#start-trial">See an event template</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-row" aria-labelledby="giving-detail">
+          <div class="feature-row__header">
+            <span class="badge">Giving</span>
+            <h2 class="feature-row__title" id="giving-detail">Grow generosity with trust.</h2>
+            <p class="feature-row__summary">Offer giving options online, in-app, and in-person with automatic reconciliation to your finance tools.</p>
+          </div>
+          <div class="feature-row__content">
+            <ul class="feature-row__list">
+              <li>Apple Pay, Google Pay, ACH, and text-to-give.</li>
+              <li>Recurring gifts, pledges, and campaign tracking.</li>
+              <li>Instant donor receipts and annual statements.</li>
+              <li>Finance dashboard with exportable reports.</li>
+            </ul>
+            <div class="feature-row__actions">
+              <a class="btn btn--primary" href="/features/giving.html">View Giving Features</a>
+              <a class="btn btn--ghost" href="/church-app.html#start-trial">Talk with generosity coach</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-row" aria-labelledby="admin-dashboard-detail">
+          <div class="feature-row__header">
+            <span class="badge">Admin Dashboard</span>
+            <h2 class="feature-row__title" id="admin-dashboard-detail">Lead with live insight.</h2>
+            <p class="feature-row__summary">Stay ahead of action items with dashboards, alerts, and role-based controls that keep the right people informed.</p>
+          </div>
+          <div class="feature-row__content">
+            <ul class="feature-row__list">
+              <li>Configurable home screen widgets.</li>
+              <li>Role-based permissions tied to ministries.</li>
+              <li>Health metrics for outreach, giving, and engagement.</li>
+              <li>Task center with bulk actions and filters.</li>
+            </ul>
+            <div class="feature-row__actions">
+              <a class="btn btn--primary" href="/features/admin-dashboard.html">Tour the Dashboard</a>
+              <a class="btn btn--ghost" href="/church-app.html#start-trial">Request analytics review</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta-band">
+        <h2 class="cta-band__title">Ready to see SWAPP power your ministry?</h2>
+        <p class="cta-band__text">Join churches who launched with our onboarding team and keep serving their communities with confidence. Register today to get full platform access for 30 days.</p>
+        <div class="stack-md" style="gap: 1rem;">
+          <a class="btn btn--primary" href="/church-app.html#start-trial">Start Your Free Trial</a>
+          <span>Prefer a guided tour? <a style="color: inherit; text-decoration: underline;" href="mailto:hello@swapp.church">Email our team</a>.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
