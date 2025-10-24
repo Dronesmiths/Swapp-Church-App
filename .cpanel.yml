@@ -1,0 +1,9 @@
+deployment:
+  tasks:
+    # ⚙️ Set your deployment path (temporary testing folder)
+    - export DEPLOYPATH=/home1/YOUR_CPANEL_USERNAME/public_html/swapp-temp/
+    # 🔁 Sync everything from repo to cPanel
+    - /bin/rsync -av --delete \
+        --exclude '.git*' \
+        --exclude '.cpanel.yml' \
+        ./ $DEPLOYPATH
