@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Management Platform | SWAPP Church App</title>
+  <meta
+    name="description"
+    content="Plan church events in minutes with SWAPP. Build registrations, showcase event cards, automate notifications, and connect ministry teams with every detail."
+  />
+  <link rel="canonical" href="https://swapp.church/features/events/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    />
+  </noscript>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    .feature-hero {
+      padding: clamp(4rem, 6vw, 6.5rem) 0 clamp(3rem, 5vw, 4.5rem);
+    }
+
+    .feature-hero__inner {
+      display: grid;
+      gap: clamp(2rem, 4vw, 3rem);
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .feature-hero__meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-brand-primary);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .feature-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      margin: 1rem 0;
+    }
+
+    .feature-hero__lead {
+      max-width: 48ch;
+      color: var(--color-neutral-600);
+      font-size: 1.1rem;
+      margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
+      background: var(--color-brand-primary);
+      color: var(--color-neutral-100);
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+      box-shadow: 0 15px 30px rgba(12, 26, 64, 0.12);
+    }
+
+    .cta-button:hover,
+    .cta-button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(12, 26, 64, 0.2);
+    }
+
+    .feature-hero__image {
+      justify-self: center;
+      max-width: min(420px, 100%);
+    }
+
+    .feature-hero__image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 24px 48px rgba(12, 26, 64, 0.18));
+    }
+
+    .feature-section {
+      padding: clamp(3.5rem, 6vw, 5rem) 0;
+    }
+
+    .feature-section--alt {
+      background: linear-gradient(135deg, rgba(12, 26, 64, 0.04), rgba(12, 26, 64, 0.08));
+    }
+
+    .feature-section__grid {
+      display: grid;
+      gap: clamp(2rem, 4vw, 3rem);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: start;
+    }
+
+    .feature-section__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3vw, 2.4rem);
+      margin-bottom: 1rem;
+    }
+
+    .feature-section__lead {
+      color: var(--color-neutral-600);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 0.85rem;
+      padding-left: 1.1rem;
+      color: var(--color-neutral-700);
+    }
+
+    .feature-card {
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background: var(--color-neutral-100);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 1rem;
+    }
+
+    .feature-card__meta {
+      display: inline-flex;
+      gap: 0.4rem;
+      align-items: center;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-brand-primary);
+      font-weight: 600;
+    }
+
+    .feature-card__title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      margin: 0;
+    }
+
+    .feature-card__text {
+      color: var(--color-neutral-600);
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .cta-band {
+      padding: clamp(3.5rem, 5vw, 4.75rem) 0;
+      text-align: center;
+      background: linear-gradient(160deg, rgba(15, 178, 122, 0.15), rgba(12, 26, 64, 0.9));
+      color: var(--color-neutral-100);
+    }
+
+    .cta-band__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta-band__text {
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+  </style>
+</head>
+<body>
+  <header class="feature-hero">
+    <div class="container feature-hero__inner">
+      <div>
+        <span class="feature-hero__meta">Events</span>
+        <h1 class="feature-hero__title">Create unforgettable gatherings in less time.</h1>
+        <p class="feature-hero__lead">
+          From registrations to volunteer rosters, SWAPP keeps every event organized and on-brand so your team can focus on the ministry moments that matter most.
+        </p>
+        <div class="hero-actions">
+          <a class="cta-button" href="/church-app.html#start-trial">Schedule Your Next Event</a>
+          <a class="btn btn--ghost" href="/features/ministries-groups.html">Coordinate with ministries</a>
+        </div>
+      </div>
+      <figure class="feature-hero__image">
+        <img src="../assets/images/mockup-events.svg" alt="SWAPP event dashboard and mobile registration screens" />
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section class="feature-section">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Launch events with guided workflows</h2>
+          <p class="feature-section__lead">
+            Build templates for recurring gatherings, assign owners, and publish beautiful event pages in just a few clicks.
+          </p>
+          <ul class="feature-list">
+            <li>Step-by-step builder for registrations, ticketing, and custom questions.</li>
+            <li>Smart defaults for capacities, payment options, and childcare requests.</li>
+            <li>Share to web, app, and social channels with autogenerated graphics.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__meta">Event creation</span>
+          <h3 class="feature-card__title">Stay ahead of every detail</h3>
+          <p class="feature-card__text">
+            Admins can preview forms, automate confirmation emails, and assign tasks without leaving the setup wizard. Drafts save automatically so planning teams can collaborate in real time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section feature-section--alt">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Event cards that convert</h2>
+          <p class="feature-section__lead">
+            Showcase schedules, speakers, and calls-to-action with responsive cards that adapt to web, mobile, and lobby kiosks.
+          </p>
+          <ul class="feature-list">
+            <li>Highlight hero images, campus tags, and spotlight badges for featured gatherings.</li>
+            <li>Embed maps, schedules, and FAQs so guests know exactly what to expect.</li>
+            <li>Surface related events to encourage next steps and ongoing engagement.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__meta">Event promotion</span>
+          <h3 class="feature-card__title">Design-ready layouts</h3>
+          <p class="feature-card__text">
+            Drag-and-drop content blocks keep branding consistent while allowing ministries to customize descriptions, images, and registration buttons.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Notifications that mobilize teams</h2>
+          <p class="feature-section__lead">
+            Keep every registrant and volunteer informed with automated reminders, schedule changes, and follow-up messages.
+          </p>
+          <ul class="feature-list">
+            <li>Send push, SMS, and email alerts triggered by registration status or role.</li>
+            <li>Deliver volunteer assignments with check-in links and arrival instructions.</li>
+            <li>Track open and response rates to measure communication health.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__meta">Notifications</span>
+          <h3 class="feature-card__title">Right message, right moment</h3>
+          <p class="feature-card__text">
+            Build message sequences for pre-event reminders, day-of updates, and post-event surveys. Automation rules make sure no one misses the information they need.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section feature-section--alt">
+      <div class="container feature-section__grid">
+        <div>
+          <h2 class="feature-section__title">Integrated with ministries &amp; follow-up</h2>
+          <p class="feature-section__lead">
+            Assign ministry owners, sync attendance, and route next steps without exporting spreadsheets or chasing down data.
+          </p>
+          <ul class="feature-list">
+            <li>Link events to ministries so leaders see rosters, communication history, and serving assignments.</li>
+            <li>Auto-create follow-up workflows when someone registers, gives, or requests care.</li>
+            <li>Share analytics with pastors highlighting ministry impact and pipeline growth.</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <span class="feature-card__meta">Ministry collaboration</span>
+          <h3 class="feature-card__title">Everyone on the same page</h3>
+          <p class="feature-card__text">
+            Real-time dashboards show attendance trends, volunteer health, and next steps across every ministry so leaders can celebrate wins and act on gaps quickly.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cta-band">
+    <div class="container">
+      <h2 class="cta-band__title">Host memorable events with confidence</h2>
+      <p class="cta-band__text">
+        Empower your staff and volunteers with tools that simplify planning, spotlight stories, and follow up on every guest.
+      </p>
+      <a class="cta-button" href="/church-app.html#start-trial">Schedule Your Next Event</a>
+    </div>
+  </aside>
+</body>
+</html>
