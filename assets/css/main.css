@@ -618,6 +618,71 @@ main {
   gap: 0.75rem;
 }
 
+.social-proof__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.social-proof__caption {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--color-neutral-600);
+}
+
+.social-proof__caption a {
+  color: var(--color-brand-primary);
+  text-decoration: underline;
+}
+
+.feature-grid .card {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.feature-grid .btn {
+  justify-self: start;
+}
+
+.steps .card {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-media {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.admin-media__stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.cta-band {
+  background: linear-gradient(135deg, rgba(15, 178, 122, 0.1), rgba(18, 216, 122, 0.15));
+}
+
+.cta-band .section__title,
+.cta-band .section__lead {
+  color: var(--color-brand-dark);
+}
+
+@media (min-width: 780px) {
+  .social-proof__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .social-proof__caption {
+    text-align: center;
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
