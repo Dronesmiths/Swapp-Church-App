@@ -1,7 +1,20 @@
 # Allow public access to files in this directory
+# Allow public access to files in this directory on both Apache 2.4 and 2.2
 Options +Indexes
 DirectoryIndex index.html
 AllowOverride All
+
+# Explicitly allow access (Apache 2.4+)
+<IfModule mod_authz_core.c>
+  Require all granted
+</IfModule>
+
+# Fallback for Apache 2.2 environments
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Allow from all
+</IfModule>
+
 <IfModule mod_headers.c>
   Header set Access-Control-Allow-Origin "*"
 </IfModule>
