@@ -2,57 +2,412 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SWAPP Church App – Deployment Successful</title>
-  <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #0fb27a, #1e3a8a);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-      text-align: center;
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SWAPP Church App | Buildingit LLC</title>
+  <meta name="description" content="SWAPP by Buildingit LLC empowers churches with a unified mobile app, member engagement tools, digital giving, and analytics across iOS, Android, and web." />
+  <link rel="canonical" href="https://swapp.church/" />
+  <meta name="theme-color" content="#0fb27a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" />
+  </noscript>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SWAPP Church App | Buildingit LLC" />
+  <meta property="og:description" content="Launch an all-in-one church app with giving, messaging, and discipleship tools powered by SWAPP." />
+  <meta property="og:url" content="https://swapp.church/" />
+  <meta property="og:image" content="https://swapp.church/wp-content/uploads/2025/06/SWAPP-Logo-Neon-Green.webp" />
+  <meta property="og:site_name" content="SWAPP Church App" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SWAPP Church App | Buildingit LLC" />
+  <meta name="twitter:description" content="Engage your church community with the SWAPP Church App for iOS, Android, and web." />
+  <meta name="twitter:image" content="https://swapp.church/wp-content/uploads/2025/06/SWAPP-Logo-Neon-Green.webp" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Buildingit LLC",
+      "url": "https://swapp.church/",
+      "logo": "https://swapp.church/wp-content/uploads/2025/06/SWAPP-Logo-Neon-Green.webp",
+      "sameAs": [
+        "https://www.facebook.com/SWAPPChurch",
+        "https://www.instagram.com/SWAPPChurch",
+        "https://x.com/SWAPPChurch",
+        "https://www.youtube.com/@SWAPPChurch"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hello@swapp.church",
+        "telephone": "+1-678-999-8212"
+      }
     }
-    h1 {
-      font-size: 2.6rem;
-      margin-bottom: 10px;
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SWAPP Church App",
+      "operatingSystem": "iOS, Android, Web",
+      "applicationCategory": "BusinessApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Buildingit LLC"
+      },
+      "downloadUrl": "https://swapp.church/",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "482"
+      },
+      "applicationSuite": "SWAPP Digital Ministry Platform",
+      "screenshot": "https://swapp.church/wp-content/uploads/2025/06/SWAPP-Logo-Neon-Green.webp",
+      "softwareVersion": "2025.1",
+      "url": "https://swapp.church/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/OnlineOnly"
+      }
     }
-    p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      line-height: 1.6;
-    }
-    a {
-      background: white;
-      color: #0fb27a;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 24px;
-      display: inline-block;
-      transition: 0.3s;
-    }
-    a:hover {
-      background: #0fb27a;
-      color: white;
-    }
-    .logo {
-      width: 160px;
-      border-radius: 14px;
-      margin-bottom: 25px;
-      box-shadow: 0 0 15px rgba(255,255,255,0.3);
-    }
-  </style>
+  </script>
 </head>
-<body>
-  <img src="https://swapp.church/wp-content/uploads/2025/06/SWAPP-Logo-Neon-Green.webp" alt="SWAPP Church App Logo" class="logo" />
-  <h1>🚀 SWAPP Church App Deployment Successful</h1>
-  <p>Your GitHub repository is now connected to your cPanel site. Any future <strong>push to main</strong> will automatically deploy updates here.</p>
-  <a href="https://swapp.church" target="_blank">Visit SWAPP</a>
+<body id="home">
+  <a class="sr-only" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#home">
+        <img src="assets/images/swapp-logo.svg" alt="SWAPP Church App logo" width="48" height="48" />
+        <span>SWAPP Church App</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+      </button>
+      <nav class="site-nav" aria-label="Primary" data-nav>
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#home" aria-current="page">Home</a></li>
+          <li><a class="site-nav__link" href="#church-app">Church App</a></li>
+          <li class="nav__item--has-dropdown">
+            <button class="site-nav__link nav__dropdown-toggle" id="features-menu-button" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="features-menu" data-dropdown-toggle>
+              Features
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                <path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+              </svg>
+            </button>
+            <div class="nav__dropdown" id="features-menu" role="menu" aria-labelledby="features-menu-button" data-dropdown>
+              <a class="site-nav__link" href="#engagement" role="menuitem">Member Engagement</a>
+              <a class="site-nav__link" href="#giving" role="menuitem">Giving &amp; Generosity</a>
+              <a class="site-nav__link" href="#insights" role="menuitem">Insights &amp; Automation</a>
+            </div>
+          </li>
+          <li><a class="site-nav__link" href="#pricing">Pricing</a></li>
+          <li><a class="site-nav__link" href="#blog">Blog</a></li>
+          <li><a class="site-nav__link" href="#faq">FAQ</a></li>
+          <li><a class="site-nav__link" href="#sign-in">Sign In</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a class="btn btn--primary" href="#register">Register Your Church</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile">
+    <ul class="mobile-nav__list">
+      <li><a class="mobile-nav__link" href="#home">Home</a></li>
+      <li><a class="mobile-nav__link" href="#church-app">Church App</a></li>
+      <li><a class="mobile-nav__link" href="#engagement">Features: Engagement</a></li>
+      <li><a class="mobile-nav__link" href="#giving">Features: Giving</a></li>
+      <li><a class="mobile-nav__link" href="#insights">Features: Insights</a></li>
+      <li><a class="mobile-nav__link" href="#pricing">Pricing</a></li>
+      <li><a class="mobile-nav__link" href="#blog">Blog</a></li>
+      <li><a class="mobile-nav__link" href="#faq">FAQ</a></li>
+      <li><a class="mobile-nav__link" href="#sign-in">Sign In</a></li>
+    </ul>
+    <div class="mobile-nav__cta">
+      <a class="btn btn--primary" href="#register">Register Your Church</a>
+    </div>
+  </nav>
+  <main id="main-content">
+    <section class="section hero" id="home">
+      <div class="container grid grid--2">
+        <div class="hero__content reveal">
+          <span class="badge">Buildingit LLC • Digital Ministry Platform</span>
+          <h1 class="hero__title">Nurture every member with the SWAPP Church App.</h1>
+          <p class="hero__text">Launch a branded experience across iOS, Android, and the web with giving, messaging, discipleship, and real-time insights in a single platform made for thriving churches.</p>
+          <div class="stack-md">
+            <div class="store-badges">
+              <a href="https://apps.apple.com/" aria-label="Download on the App Store">
+                <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" width="180" height="60" loading="lazy" />
+              </a>
+              <a href="https://play.google.com/store" aria-label="Get it on Google Play">
+                <img src="assets/images/google-play-badge.svg" alt="Get it on Google Play" width="180" height="60" loading="lazy" />
+              </a>
+            </div>
+            <ul class="feature-list">
+              <li>Instant content publishing across all devices</li>
+              <li>Deep member analytics and automated follow-up flows</li>
+              <li>Secure in-app and web giving with QuickPay</li>
+            </ul>
+            <div class="stack-md">
+              <a class="btn btn--primary" href="#register">Register Your Church</a>
+              <a class="btn btn--ghost" href="#church-app">Explore the platform</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero__media reveal" aria-hidden="true">
+          <div class="hero__card">
+            <img src="assets/images/hero-dashboard.svg" alt="SWAPP app dashboard preview" width="640" height="480" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="church-app">
+      <div class="container stack-lg">
+        <div class="text-center">
+          <h2 class="section__title">One platform, every touchpoint covered</h2>
+          <p class="section__lead">From first-time guest follow-up to weekly discipleship, SWAPP unifies your digital ministry strategy with mobile-first experiences and automation.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card card--icon reveal" id="engagement">
+            <img src="assets/images/icon-instagram.svg" alt="Engagement icon" width="48" height="48" loading="lazy" />
+            <h3>Member Engagement</h3>
+            <p>Segment your congregation, schedule messages, and trigger personalized nurture plans automatically.</p>
+          </article>
+          <article class="card card--icon reveal" id="giving">
+            <img src="assets/images/icon-facebook.svg" alt="Generosity icon" width="48" height="48" loading="lazy" />
+            <h3>Giving &amp; Generosity</h3>
+            <p>Offer contactless giving, recurring pledges, and transparent reporting that inspires generosity.</p>
+          </article>
+          <article class="card card--icon reveal" id="insights">
+            <img src="assets/images/icon-x.svg" alt="Insights icon" width="48" height="48" loading="lazy" />
+            <h3>Insights &amp; Automation</h3>
+            <p>Track attendance, view engagement funnels, and automate next steps using ministry-centric data models.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="features">
+      <div class="container grid grid--2">
+        <div class="reveal">
+          <h2 class="section__title">Built for hybrid ministry</h2>
+          <p class="section__lead">Deliver immersive live streams, on-demand archives, and AI-assisted workflows that equip your staff to pastor at scale.</p>
+          <ul class="feature-list">
+            <li>Drag-and-drop layout builder with branded themes</li>
+            <li>Push notifications, SMS, and email sequenced together</li>
+            <li>Volunteer onboarding, scheduling, and reminders</li>
+          </ul>
+        </div>
+        <div class="testimonial reveal">
+          <p class="testimonial__quote">“SWAPP helped us disciple our digital congregation and grow giving by 37% in a single quarter.”</p>
+          <div>
+            <strong>Pastor Jordan Ellis</strong>
+            <p class="text-muted">Illuminate Church, Austin TX</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container stack-lg">
+        <div class="text-center">
+          <h2 class="section__title">Simple pricing that scales with your church</h2>
+          <p class="section__lead">Choose a launch plan that matches your ministry’s momentum. Every package includes unlimited members, secure hosting, and live support.</p>
+        </div>
+        <div class="pricing">
+          <article class="pricing-card reveal">
+            <div>
+              <h3>Starter</h3>
+              <p class="text-muted">Ideal for new church plants and ministries launching digital discipleship.</p>
+            </div>
+            <div class="pricing-card__price">$99<span class="text-muted">/mo</span></div>
+            <ul class="feature-list">
+              <li>Custom branded iOS &amp; Android app</li>
+              <li>Core giving + message automation</li>
+              <li>Two admin seats included</li>
+            </ul>
+            <a class="btn btn--ghost" href="#register">Start with Starter</a>
+          </article>
+          <article class="pricing-card pricing-card--featured reveal">
+            <div>
+              <h3>Growth</h3>
+              <p class="text-muted">For growing churches focused on hybrid experiences and data-driven ministry.</p>
+            </div>
+            <div class="pricing-card__price">$199<span class="text-muted">/mo</span></div>
+            <ul class="feature-list">
+              <li>Advanced analytics dashboards</li>
+              <li>Unlimited automation journeys</li>
+              <li>Dedicated success strategist</li>
+            </ul>
+            <a class="btn btn--primary" href="#register">Most Popular</a>
+          </article>
+          <article class="pricing-card reveal">
+            <div>
+              <h3>Impact</h3>
+              <p class="text-muted">Enterprise-grade infrastructure for multi-site churches and denominations.</p>
+            </div>
+            <div class="pricing-card__price">Let’s Talk</div>
+            <ul class="feature-list">
+              <li>API and data warehouse integrations</li>
+              <li>Dedicated onboarding concierge</li>
+              <li>Priority SLA &amp; compliance reviews</li>
+            </ul>
+            <a class="btn btn--ghost" href="#register">Schedule a consultation</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="blog">
+      <div class="container grid grid--3">
+        <article class="card reveal">
+          <h3>Designing meaningful digital discipleship paths</h3>
+          <p class="text-muted">Discover how SWAPP churches craft intentional digital discipleship flows with actionable milestones.</p>
+          <a class="btn btn--ghost" href="https://swapp.church/blog" target="_blank" rel="noopener">Read the story</a>
+        </article>
+        <article class="card reveal">
+          <h3>How hybrid churches elevate generosity</h3>
+          <p class="text-muted">See giving strategies that blend online and in-person generosity moments using SWAPP.</p>
+          <a class="btn btn--ghost" href="https://swapp.church/blog" target="_blank" rel="noopener">Explore insights</a>
+        </article>
+        <article class="card reveal">
+          <h3>Playbook: Launch your church app in 30 days</h3>
+          <p class="text-muted">A step-by-step plan with templates, staff training, and marketing assets for a high-impact launch.</p>
+          <a class="btn btn--ghost" href="https://swapp.church/blog" target="_blank" rel="noopener">Download playbook</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container grid grid--2">
+        <div class="stack-md reveal">
+          <h2 class="section__title">Frequently asked questions</h2>
+          <p class="section__lead">Have more questions? Reach out through the form below and our team will respond within one business day.</p>
+          <div class="faq">
+            <div class="faq__item">
+              <h3>How fast can we launch?</h3>
+              <p class="text-muted">Most churches launch in 3-4 weeks with our dedicated onboarding team handling app store approvals.</p>
+            </div>
+            <div class="faq__item">
+              <h3>Do we need developers?</h3>
+              <p class="text-muted">No coding required. Your team manages everything inside the intuitive SWAPP dashboard.</p>
+            </div>
+            <div class="faq__item">
+              <h3>What support is included?</h3>
+              <p class="text-muted">All plans include unlimited chat, quarterly strategy sessions, and Sunday morning emergency support.</p>
+            </div>
+          </div>
+        </div>
+        <aside class="cta-banner reveal" id="register">
+          <h3>Ready to register your church?</h3>
+          <p>Book a guided walkthrough and receive a custom rollout plan tailored to your congregation.</p>
+          <a class="btn btn--primary" href="mailto:hello@swapp.church">Schedule a call</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="sign-in">
+      <div class="container grid grid--2">
+        <div class="stack-md reveal">
+          <h2 class="section__title">Admin Sign In</h2>
+          <p class="section__lead">Access your SWAPP admin dashboard to manage content, automate discipleship flows, and monitor engagement in real time.</p>
+          <a class="btn btn--primary" href="https://dashboard.swapp.church" target="_blank" rel="noopener">Go to Dashboard</a>
+        </div>
+        <div class="stack-md reveal">
+          <h3>Need credentials?</h3>
+          <p class="text-muted">Request new user access from your Buildingit LLC success strategist or contact our support team for immediate assistance.</p>
+          <a class="btn btn--ghost" href="mailto:support@swapp.church">Contact support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="stack-md">
+          <a class="footer__logo" href="#home">
+            <img src="assets/images/swapp-logo.svg" alt="SWAPP Church App" width="56" height="56" loading="lazy" />
+            <span>SWAPP Church App</span>
+          </a>
+          <p>Powered by Buildingit LLC — equipping churches to thrive in a hybrid world with tools that delight members and empower leaders.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/SWAPPChurch" aria-label="SWAPP on Facebook">
+              <img src="assets/images/icon-facebook.svg" alt="Facebook" width="32" height="32" loading="lazy" />
+            </a>
+            <a href="https://www.instagram.com/SWAPPChurch" aria-label="SWAPP on Instagram">
+              <img src="assets/images/icon-instagram.svg" alt="Instagram" width="32" height="32" loading="lazy" />
+            </a>
+            <a href="https://x.com/SWAPPChurch" aria-label="SWAPP on X">
+              <img src="assets/images/icon-x.svg" alt="X" width="32" height="32" loading="lazy" />
+            </a>
+            <a href="https://www.youtube.com/@SWAPPChurch" aria-label="SWAPP on YouTube">
+              <img src="assets/images/icon-youtube.svg" alt="YouTube" width="32" height="32" loading="lazy" />
+            </a>
+          </div>
+        </div>
+        <div class="stack-md">
+          <h3>Legal</h3>
+          <ul class="footer__legal">
+            <li><a href="https://swapp.church/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li>
+            <li><a href="https://swapp.church/disclaimer" target="_blank" rel="noopener">Disclaimer</a></li>
+            <li><a href="https://swapp.church/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a></li>
+            <li><a href="https://swapp.church/accessibility" target="_blank" rel="noopener">Accessibility</a></li>
+          </ul>
+        </div>
+        <div class="stack-md">
+          <h3>Contact</h3>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@swapp.church">hello@swapp.church</a></li>
+            <li><a href="tel:+16789998212">+1 (678) 999-8212</a></li>
+            <li>Buildingit LLC<br />316 Digital Way, Atlanta, GA 30308</li>
+          </ul>
+          <div class="store-badges">
+            <a href="https://apps.apple.com/" aria-label="Download on the App Store">
+              <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" width="180" height="60" loading="lazy" />
+            </a>
+            <a href="https://play.google.com/store" aria-label="Get it on Google Play">
+              <img src="assets/images/google-play-badge.svg" alt="Get it on Google Play" width="180" height="60" loading="lazy" />
+            </a>
+          </div>
+        </div>
+        <div class="stack-md">
+          <h3>Reach out</h3>
+          <form class="footer__form" action="https://formspree.io/f/xbjnbjrw" method="POST">
+            <label>
+              <span class="sr-only">Name</span>
+              <input type="text" name="name" placeholder="Name" required />
+            </label>
+            <label>
+              <span class="sr-only">Email</span>
+              <input type="email" name="email" placeholder="Email" required />
+            </label>
+            <label>
+              <span class="sr-only">Church name</span>
+              <input type="text" name="church" placeholder="Church name" required />
+            </label>
+            <label>
+              <span class="sr-only">Message</span>
+              <textarea name="message" placeholder="How can we help?" required></textarea>
+            </label>
+            <button class="btn btn--primary" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 Buildingit LLC. All rights reserved.</p>
+        <p>Made for modern ministry — powered by SWAPP.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
