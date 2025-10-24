@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SWAPP Church App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SWAPP Church App – Deployment Successful</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #0fb27a, #1e3a8a);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
       text-align: center;
-      padding: 80px 20px;
     }
     h1 {
-      color: #0fb27a;
-      font-size: 42px;
+      font-size: 2.6rem;
+      margin-bottom: 10px;
     }
     p {
-      font-size: 18px;
-      color: #475569;
+      font-size: 1.1rem;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    a {
+      background: white;
+      color: #0fb27a;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 24px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #0fb27a;
+      color: white;
+    }
+    .logo {
+      width: 160px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
     }
   </style>
 </head>
 <body>
-  <h1>SWAPP Church App</h1>
-  <p>Deployment successful 🚀</p>
-  <p>This site is now powered by GitHub → cPanel automation.</p>
+  <img src="https://swapp.church/wp-content/uploads/2025/06/SWAPP-Logo-Neon-Green.webp" alt="SWAPP Church App Logo" class="logo" />
+  <h1>🚀 SWAPP Church App Deployment Successful</h1>
+  <p>Your GitHub repository is now connected to your cPanel site. Any future <strong>push to main</strong> will automatically deploy updates here.</p>
+  <a href="https://swapp.church" target="_blank">Visit SWAPP</a>
 </body>
 </html>
